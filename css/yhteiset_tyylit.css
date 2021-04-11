@@ -64,7 +64,7 @@ a:hover {
 /* MAIN */
 
 main {
-
+    min-height: 60vh;
 }
 
 /* FOOTER */
@@ -73,8 +73,6 @@ footer {
     background-color: #7D657A;
     width: 100%;
     padding: 10px;
-    position: absolute;
-    bottom: 0;
 }
 
 .smiley {
