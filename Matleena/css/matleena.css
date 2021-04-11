@@ -1,0 +1,17 @@
+/* Omien sivujen tyylimäärittelyt */
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Tietovisa */
+
+button {
+    background-color: #F58220;
+    border: none;
+    width: 400px;
+    height: 44px;
+    border-radius: 8px;
+    margin: 5px;
+}
