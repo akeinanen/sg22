@@ -1,25 +1,82 @@
 /// <reference path="jquery-3.6.0.min.js" />
 
-$(".btn").on("click", function () {
-    // Tarkistin, toimiiko funktio alert("Privet");
-    if ($(this).hasClass("first")) {
+$(function(){
 
-        alert($('input[name=first]:checked').val());
+    $(".btn").on("click", function(){
 
-    } else if ($(this).hasClass("second")) {
+        if ($(this).hasClass("first")) {
 
-        alert($('input[name=second]:checked').val());
+            let vastaus = Number($('input[name=first]:checked').val());
 
-    } else if ($(this).hasClass("third")) {
+           if (vastaus === 1) {
 
-        alert($('input[name=third]:checked').val());
+            $("#result1").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
 
-    } else if ($(this).hasClass("fourth")) {
+           } else {
 
-        alert($('input[name=fourth]:checked').val());
+            $('#result1').html("Kokeile uudelleen");
 
-    } else if ($(this).hasClass("fifth")) {
+           }
+            
+            
+        } else if ($(this).hasClass("second")) {
 
-        alert($('input[name=fifth]:checked').val());
-    }
+            let vastaus = Number($('input[name=second]:checked').val());
+
+            if (vastaus === 1) {
+ 
+             $("#result2").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+ 
+            } else {
+ 
+             $('#result2').html("Kokeile uudelleen");
+ 
+            }
+            
+
+        } else if ($(this).hasClass("third")) {
+
+            let vastaus = Number($('input[name=third]:checked').val());
+
+            if (vastaus === 1) {
+ 
+             $("#result3").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+ 
+            } else {
+ 
+             $('#result3').html("Kokeile uudelleen");
+ 
+            }
+
+        } else if ($(this).hasClass("fourth")) {
+
+            let vastaus = Number($('input[name=fourth]:checked').val());
+
+            if (vastaus === 1) {
+ 
+             $("#result4").html("Hyvä!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+ 
+            } else {
+ 
+             $('#result4').html("Kokeile uudelleen");
+ 
+            }
+
+        } else if ($(this).hasClass("fifth")) {
+
+            let vastaus = Number($('input[name=fifth]:checked').val());
+
+            if (vastaus === 1) {
+ 
+             $("#result5").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+ 
+            } else {
+ 
+             $('#result5').html("Kokeile uudelleen");
+ 
+            }
+        }
+    });
+
+
 });
