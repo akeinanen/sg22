@@ -67,6 +67,15 @@ h1 {
 .kysymys {
   color: #5271FF;
 }
+
+  .selected {
+    background-color: #F58220;
+    border-radius: 15px;
+    padding: 5px;
+    max-width: 140px;
+}
+
+
   
 
 
