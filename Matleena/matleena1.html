@@ -23,12 +23,122 @@
     
     <main class="container-fluid">
         <section class="row">
-            <div class="col-12">
+            <div class="col-sm-12 col-md-12">
                 <h2>Matikkavisa</h2>
-
+                <p>Tässä matikkavisassa pääset harjoittelemaan kertotauluja.</p>
             </div>
-
         </section>
+
+        <section class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>Tähä joku kuva</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <h3>Kertolaskut</h3>
+                <p>1. Kuinka paljon on 3 x 5?</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta1" name="vastaus" class="kysymys1" value="1">
+                        <label for="valinta1">15</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta2" name="vastaus" class="kysymys1" value="0">
+                        <label for="valinta2">20</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta3" name="vastaus" class="kysymys1" value="0">
+                        <label for="valinta3">21</label>
+                    </li>
+                </ul>
+                <button class="matikka">Vastaa</button>
+                <p id="vastaus">Vastauksesi on</p>
+            </div>  
+        </section>  
+
+        <section class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>2. Kuinka paljon on 4 x 6?</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta4" name="vastaus2" class="kysymys2" value="0">
+                        <label for="valinta4">18</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta5" name="vastaus2" class="kysymys2" value="1">
+                        <label for="valinta5">24</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta6" name="vastaus2" class="kysymys2" value="0">
+                        <label for="valinta6">30</label>
+                    </li>
+                </ul>
+                <button class="matikka">Vastaa</button>
+                <p id="vastaus">Vastauksesi on</p>
+            </div>    
+
+            <div class="col-sm-12 col-md-6">
+                <p>3. Kuinka paljon on 7 x 6?</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta7" name="vastaus3" class="kysymys3" value="0">
+                        <label for="valinta7">37</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta8" name="vastaus3" class="kysymys3" value="1">
+                        <label for="valinta8">42</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta9" name="vastaus3" class="kysymys3" value="0">
+                        <label for="valinta9">48</label>
+                    </li>
+                </ul>
+                <button class="matikka">Vastaa</button>
+                <p id="vastaus">Vastauksesi on</p>
+            </div>
+        </section>    
+
+        <section class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>4. Kuinka paljon on 5 x 8?</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta10" name="vastaus4" class="kysymys4" value="0">
+                        <label for="valinta10">32</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta11" name="vastaus4" class="kysymys4" value="0">
+                        <label for="valinta11">38</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta12" name="vastaus4" class="kysymys4" value="1">
+                        <label for="valinta12">40</label>
+                    </li>
+                </ul>
+                <button class="matikka">Vastaa</button>
+                <p id="vastaus">Vastauksesi on</p>
+            </div>    
+
+            <div class="col-sm-12 col-md-6">
+                <p>5. Kuinka paljon on 8 x 9?</p>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta13" name="vastaus5" class="kysymys5" value="1">
+                        <label for="valinta13">72</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta14" name="vastaus5" class="kysymys5" value="0">
+                        <label for="valinta14">76</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta15" name="vastaus5" class="kysymys5" value="0">
+                        <label for="valinta15">80</label>
+                    </li>
+                </ul>
+                <button class="matikka">Vastaa</button>
+                <p id="vastaus">Vastauksesi on</p>
+            </div>    
+        </section>
+
     </main>
     
     <footer id="footer">
@@ -45,6 +155,7 @@
             $("footer").load("footer.html");
         })
     </script>
-    <script src="js/skole.js"></script>       
+    <script src="js/skole.js"></script>
+    <script src="js/matikkavisa.js"></script>       
 </body>
 </html>
