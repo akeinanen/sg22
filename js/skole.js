@@ -3,7 +3,7 @@ opetussivusto "Skole"
 Markus Erkkilä, Matleena Autio, Santeri Pirilä, Akseli Keinänen, Vadim Panfilov
 31.3.2021 */
 
-$(window).on('load', () => {
+/* $(window).on('load', () => {
     console.log(window.location.href)
     $('.main-nav li a').each(() => {
         console.log($(this));
@@ -11,4 +11,4 @@ $(window).on('load', () => {
             $(this).addClass('active');
         }
     });
-});
+}); */
