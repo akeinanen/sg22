@@ -5,12 +5,20 @@ ul {
     padding-left: 0;
 }
 
+/* Matikkavisa */
+
+.matikka {
+    background-color: #5271FF;
+    width: 120px;
+    height: 34px;
+}
+
 /* Tietovisa */
 
 button {
     background-color: #F58220;
     border: none;
-    width: 400px;
+    width: 350px;
     height: 44px;
     border-radius: 8px;
     margin: 5px;
