@@ -79,7 +79,7 @@ $(function () {
         }
     });
 
-    // tyhjennetaan edellisen resultit
+    // tyhjennetaan edelliset resultit
     $("[name=first]").on("click", function(){
         $("#result1").html(" ");  
     });
