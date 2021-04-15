@@ -22,8 +22,8 @@
 
     <main>
         <div id="first">
-            <h1 class="mt-5 text-center">Tervetuloa visailun ihmeelliseen maailmaan!</h1>
-            <p class="mt-3 text-center">Mikäli koet olevasi valmis aloittamaan elämäsi koettelemuksen, klikkaa allaolevaa nappia.</p>
+            <h1 class="mt-5 text-center">Ohjelmointivisa!</h1>
+            <p class="mt-3 text-center">Mikäli koet olevasi valmis, klikkaa allaolevaa nappia.</p>
             <div class="text-center">
                 <button id="start" class="button btn-primary mt-5 p-3 toggler" data-hide="first" data-show="game-container">Aloita!</button>
             </div>
@@ -32,8 +32,9 @@
 
         <div style="display: none;" id="game-container">
             <p id="questionCount" class="text-end m-3"></p>
+            <p id="triesLeft" class="text-end m-3"></p>
             <div id="question-1">
-                <h1 class="text-center">Kysymys 2</h1>
+                <h3 class="text-center">Lorem ipsum</h3>
                 <p class="text-center">Mikä seuraavista JavaSciprt-koodeista palauttaa arvon true kun let x = "10"; ?</p>
 
                 <div class="d-flex" style="justify-content: center;">
@@ -64,11 +65,22 @@
                 <h1 class="text-center">Kysymys 2</h1>
             </div>
 
-            <div id="notification" class="justify-content-center text-center">
-                
+            <div id="notification" class="d-flex" style="justify-content: center;">
+                <div style="display: inline-block">
+                </div>
             </div>
+            
         </div>
+
+
     </main>
+
+    <div id="gameOver" style="display: none;">
+        <div class="d-flex align-items-center ">
+            <div class="m-auto"><h1>Hävisit pelin!</h1></div>
+            <div class="m-auto"><button class="toggler" data-hide="gameOver" data-show="first">Aloita alusta</button></div>
+        </div>
+    </div>
 
     <footer id="footer"></footer>
 
