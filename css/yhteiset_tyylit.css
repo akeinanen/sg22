@@ -10,10 +10,16 @@ Markus Erkkilä, Matleena Autio, Santeri Pirilä, Akseli Keinänen, Vadim Panfil
 /* VARIABLES */
 
 :root {
-    --orange: #F58220:
+    --orange: #F58220;
 }
 
 /* GLOBAL STYLES */
+
+
+
+main {
+    background: linear-gradient(to top, #F2EDDB 0%, #D4E3FB 100%); 
+}
 
 .dropdown-menu {
     padding: 0; 
@@ -24,6 +30,10 @@ a:hover {
 }
 
 /* HEADER  */
+
+header {
+    background-color: #F5EEBE;
+}
 
 .logo {
     width: 20em;
@@ -64,13 +74,13 @@ a:hover {
 /* MAIN */
 
 main {
-    min-height: 60vh;
+    min-height: 70vh;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: #7D657A;
+    background-color: #9a9c9e;
     width: 100%;
     padding: 10px;
 }
