@@ -13,6 +13,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
     crossorigin="anonymous"></script>
+    
+  <script src="https://use.fontawesome.com/0af1eb10a5.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/yhteiset_tyylit.css">
@@ -28,19 +31,30 @@
 </head>
 
 <body>
+
   <header id="header"></header>
 
   <main>
     <div class="container mt-4 mb-4">
 
-      <div class="row center">
-        <div class="col text-center">
-          <h1>Musavisa</h1>
+      <div class="row">
+        <div class="col text-end mt-2">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
         </div>
       </div>
 
-      <section class="row center">
+      <div class="row center">
+        <div class="col text-center">
+          <h1>Musavisa</h1>
+        </div>       
+      </div>
+      <div class="row center">
+        <div class="col text-center">
+          <p>Testaa tietouttasi musiikkikysymyksien parissa</p>
+        </div>       
+      </div>
 
+      <section class="row center">
         <div class="col-12 col-md-6 m-2">
           <div class="otsikko text-center">
             Kuinka monta kieltä bassokitarassa yleensä on?
@@ -49,7 +63,7 @@
             <ul class="bg-light">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" value="1" id="kysymys1">
+                  <input class="form-check-input" type="radio" name="vastaus1" value="1" id="kysymys1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     4
                   </label>
@@ -57,7 +71,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" value="2" id="kysymys1">
+                  <input class="form-check-input" type="radio" name="vastaus1" value="0" id="kysymys1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     5
                   </label>
@@ -65,7 +79,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" value="3" id="kysymys1">
+                  <input class="form-check-input" type="radio" name="vastaus1" value="0" id="kysymys1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     6
                   </label>
@@ -73,7 +87,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" value="4" id="kysymys1">
+                  <input class="form-check-input" type="radio" name="vastaus1" value="0" id="kysymys1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     3
                   </label>
@@ -93,7 +107,7 @@
             <ul class="bg-light">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus2" value="0" id="kysymys2">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Sormillaan
                   </label>
@@ -101,7 +115,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus2" value="0" id="kysymys2">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Sulalla
                   </label>
@@ -109,7 +123,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus2" value="1" id="kysymys2">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Jousella
                   </label>
@@ -117,7 +131,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus2" value="0" id="kysymys2">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Kapulalla
                   </label>
@@ -137,7 +151,7 @@
             <ul class="bg-light">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus3" value="0" id="kysymys3">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Kolme
                   </label>
@@ -145,7 +159,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus3" value="1" id="kysymys3">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Neljä
                   </label>
@@ -153,7 +167,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus3" value="0" id="kysymys3">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Kaksi
                   </label>
@@ -161,7 +175,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus3" value="0" id="kysymys3">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Viisi
                   </label>
@@ -181,7 +195,7 @@
             <ul class="bg-light">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus4" value="0" id="kysymys4">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Kitara
                   </label>
@@ -189,7 +203,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus4" value="0" id="kysymys4">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Harppu
                   </label>
@@ -197,7 +211,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus4" value="1" id="kysymys4">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Kantele
                   </label>
@@ -205,7 +219,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus4" value="0" id="kysymys4">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Nokkahuilu
                   </label>
@@ -225,7 +239,7 @@
             <ul class="bg-light">
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus5" value="0" id="kysymys5">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Nopeaksi
                   </label>
@@ -233,7 +247,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus5" value="1" id="kysymys5">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Surulliseksi
                   </label>
@@ -241,7 +255,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus5" value="0" id="kysymys5">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Hitaaksi
                   </label>
@@ -249,7 +263,7 @@
               </li>
               <li>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="vastaus" id="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="vastaus5" value="0" id="kysymys5">
                   <label class="form-check-label" for="flexRadioDefault1">
                     Iloiseksi
                   </label>
@@ -265,18 +279,20 @@
     <div class="container">
       <div class="row center mb-4">
         <div class="col-5 d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-secondary btn-sm" type="button">Aloita alusta</button>
-          <button class="btn btn-primary btn-lg" type="button">Vastaa</button>
+          <button class="btn btn-secondary btn-sm mb-2" type="button" id="alusta">Aloita alusta</button>
+          <button class="btn btn-primary btn-lg mb-2" type="button" id="vastaa">Vastaa</button>
         </div>
       </div>
     </div>
+
+    <h1 id="tulos" class="center mb-2"></h1>
 
   </main>
 
   <footer id="footer"></footer>
 
   <script src="/js/skole.js"></script>
-
+  <script src="/Markus/js/oma.js"></script>
 </body>
 
 </html>
