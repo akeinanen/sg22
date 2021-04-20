@@ -1,11 +1,37 @@
 /* Omien sivujen tyylimäärittelyt */
 
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+
 ul {
     list-style-type: none;
     padding-left: 0;
 }
 
 /* Matikkavisa */
+
+h1 {
+    font-family: Finger Paint;
+    color: #F58220;
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+
+h3 {
+    font-family: Finger Paint, cursive;
+    color: #F58220;
+}
+
+.tsemppiä {
+    max-width: 80%;
+    margin-left: 20px;
+}
+
+.kysymykset {
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
 
 .matikka {
     background-color: #5271FF;
@@ -14,6 +40,12 @@ ul {
 }
 
 /* Tietovisa */
+
+h2 {
+    font-family: Finger Paint, cursive;
+    color: #5271FF;
+    margin-top: 20px;
+}
 
 button {
     background-color: #F58220;

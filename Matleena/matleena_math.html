@@ -22,19 +22,30 @@
     </header>
     
     <main class="container-fluid">
-        <section class="row">
-            <div class="col-sm-12 col-md-12">
-                <h2>Matikkavisa</h2>
-                <p>Tässä matikkavisassa pääset harjoittelemaan kertotauluja.</p>
+        <section class="row kysymykset">
+            <div class="col-12">
+                <h1 class="text-center">Matikkavisa</h1>
             </div>
+            <figure class="col-sm-10 col-md-3">
+                <img src="img/tsemppiä.png" alt="säännöt" class="tsemppiä img-fluid">
+            </figure>
+            <div class="col-sm-12 col-md-3 text-center">
+                <h3>01</h3>
+                <p>Visassa on viisi kysymystä ja jokaisessa on kolme vastausvaihtoehtoa.</p>
+            </div>
+            <div class="col-sm-12 col-md-3 text-center">
+                <h3>02</h3>
+                <p>Valitse mielestäsi oikea vastaus. Vastausta ei voi vaihtaa!</p>
+            </div>
+            <div class="col-sm-12 col-md-3 text-center">
+                <h3>03</h3>
+                <p>Katso visan lopusta tulokset ja lunasta palkintosi.</p>
+            </div>
+            <hr class="col-12">
         </section>
 
-        <section class="row">
-            <div class="col-sm-12 col-md-6">
-                <p>Tähä joku kuva</p>
-            </div>
-            <div class="col-sm-12 col-md-6">
-                <h3>Kertolaskut</h3>
+        <section class="row kysymykset">
+            <div class="col-sm-12 col-md-4">
                 <p>1. Kuinka paljon on 3 x 5?</p>
                 <ul>
                     <li>
@@ -53,10 +64,7 @@
                 <button class="matikka" id="vastaa1">Vastaa</button>
                 <p id="tulos1">Vastauksesi on...</p>
             </div>  
-        </section>  
-
-        <section class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-4">
                 <p>2. Kuinka paljon on 4 x 6?</p>
                 <ul>
                     <li>
@@ -74,9 +82,8 @@
                 </ul>
                 <button class="matikka" id="vastaa2">Vastaa</button>
                 <p id="tulos2">Vastauksesi on...</p>
-            </div>    
-
-            <div class="col-sm-12 col-md-6">
+            </div> 
+            <div class="col-sm-12 col-md-4">
                 <p>3. Kuinka paljon on 7 x 6?</p>
                 <ul>
                     <li>
@@ -95,10 +102,10 @@
                 <button class="matikka" id="vastaa3">Vastaa</button>
                 <p id="tulos3">Vastauksesi on...</p>
             </div>
-        </section>    
+        </section>  
 
-        <section class="row">
-            <div class="col-sm-12 col-md-6">
+        <section class="row kysymykset">
+            <div class="col-sm-12 col-md-4">
                 <p>4. Kuinka paljon on 5 x 8?</p>
                 <ul>
                     <li>
@@ -118,7 +125,7 @@
                 <p id="tulos4">Vastauksesi on...</p>
             </div>    
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-4">
                 <p>5. Kuinka paljon on 8 x 9?</p>
                 <ul>
                     <li>
@@ -137,6 +144,21 @@
                 <button class="matikka" id="vastaa5">Vastaa</button>
                 <p id="tulos5">Vastauksesi on...</p>
             </div>    
+            <hr>
+        </section>
+
+        <section class="row">
+            <div class="col-12 text-center">
+                <h1>Tulokset</h1>
+            </div>
+            <div class="col-sm-12 col-md-6 text-center">
+                <h3>Vastasit oikein...</h3>
+                <p></p>
+            </div>
+            <div class="col-sm-12 col-md-6 text-center">
+                <h3>Lunasta palkintosi!</h3>
+                <p></p>
+            </div>
         </section>
 
     </main>
