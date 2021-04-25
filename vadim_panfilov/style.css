@@ -1,4 +1,5 @@
-/* Alapuolella for button-radio rivit 2-57 */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@352&display=swap');
+/* For button-radio */
 .option-input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -55,8 +56,7 @@
   .option-input::after {
     border-radius: 50%;
   }
-/* https://fonts.google.com/specimen/Quicksand*/
-  p {
+  p { /* https://fonts.google.com/specimen/Quicksand*/
     font-family: 'Quicksand', sans-serif;
   }
 
