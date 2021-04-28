@@ -4,8 +4,6 @@
 
 $(function() {
 
-    
-
     $("#vastaa").on("click", function () {  
         let oikein = 0;
         let vastaus1 = $("[name=vastaus1]:checked").val();
@@ -41,6 +39,19 @@ $(function() {
         $('input[name=vastaus3]').prop('checked', false); 
         $('input[name=vastaus4]').prop('checked', false);
         $('input[name=vastaus5]').prop('checked', false);    
+    });
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+      }
+
+    $("#vastaa2").on("click", function() {
+        //laske kerto
+        //lukujen pitää näykä ennen napin painallusta
+        let number1 = getRndInteger(1, 10);
+        let number2 = getRndInteger(1, 10);
+        let tulo = number1 * number2;
+
     });
     
 })

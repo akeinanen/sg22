@@ -27,3 +27,27 @@ li {
     align-items: center;
     justify-content: center;
 }
+
+.kehys {
+    border-radius: 1px;
+    border-color: blueviolet;
+    border-style: groove;
+    padding: 2em;
+    background-color: violet;
+    color: whitesmoke;
+    font-size: large;
+    font-weight: bold;
+    height: 300px;
+    
+}
+
+#vastaa2 {
+    max-width: 100px;
+}
+
+#eka_nro {
+    border-style: groove;
+    border-radius: 1px;
+    border-color: black;
+    
+}
