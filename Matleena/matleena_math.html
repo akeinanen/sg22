@@ -26,20 +26,17 @@
             <div class="col-12">
                 <h1 class="text-center">Matikkavisa</h1>
             </div>
-            <figure class="col-sm-10 col-md-3">
-                <img src="img/tsemppiä.png" alt="säännöt" class="tsemppiä img-fluid">
-            </figure>
-            <div class="col-sm-12 col-md-3 text-center">
+            <div class="col-sm-12 col-md-4 text-center">
                 <h3>01</h3>
                 <p>Visassa on viisi kysymystä ja jokaisessa on kolme vastausvaihtoehtoa.</p>
             </div>
-            <div class="col-sm-12 col-md-3 text-center">
+            <div class="col-sm-12 col-md-4 text-center">
                 <h3>02</h3>
                 <p>Valitse mielestäsi oikea vastaus. Vastausta ei voi vaihtaa!</p>
             </div>
-            <div class="col-sm-12 col-md-3 text-center">
+            <div class="col-sm-12 col-md-4 text-center">
                 <h3>03</h3>
-                <p>Katso visan lopusta tulokset ja lunasta palkintosi.</p>
+                <p>Katso tulokset visan lopusta ja lunasta palkintosi.</p>
             </div>
             <hr class="col-12">
         </section>
@@ -82,7 +79,13 @@
                 </ul>
                 <button class="matikka" id="vastaa2">Vastaa</button>
                 <p id="tulos2">Vastauksesi on...</p>
-            </div> 
+            </div>
+            <figure class="col-sm-10 col-md-3">
+                <img src="img/Visan säännöt.png" alt="säännöt" class="tsemppiä img-fluid">
+            </figure>
+        </section>  
+
+        <section class="row kysymykset">
             <div class="col-sm-12 col-md-4">
                 <p>3. Kuinka paljon on 7 x 6?</p>
                 <ul>
@@ -102,9 +105,6 @@
                 <button class="matikka" id="vastaa3">Vastaa</button>
                 <p id="tulos3">Vastauksesi on...</p>
             </div>
-        </section>  
-
-        <section class="row kysymykset">
             <div class="col-sm-12 col-md-4">
                 <p>4. Kuinka paljon on 5 x 8?</p>
                 <ul>
@@ -152,12 +152,16 @@
                 <h1>Tulokset</h1>
             </div>
             <div class="col-sm-12 col-md-6 text-center">
-                <h3>Vastasit oikein...</h3>
-                <p></p>
+                <h3>Vastasit oikein:</h3>
+                <h2 id="total"></h2>
             </div>
             <div class="col-sm-12 col-md-6 text-center">
-                <h3>Lunasta palkintosi!</h3>
-                <p></p>
+                <h3>Palkintosi!</h3>
+                <p id="prize">
+                    <img src="img/1.png" alt="" id="prize1" class="hided img-fluid">
+                    <img src="img/2.png" alt="" id="prize2" class="hided img-fluid">
+                    <img src="img/3.png" alt="" id="prize3" class="hided img-fluid">
+                </p>
             </div>
         </section>
 

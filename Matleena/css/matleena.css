@@ -23,20 +23,34 @@ h3 {
 }
 
 .tsemppiä {
-    max-width: 80%;
-    margin-left: 20px;
+    max-width: 60%;
 }
 
 .kysymykset {
     margin-right: 20px;
     margin-left: 20px;
-
 }
 
 .matikka {
     background-color: #5271FF;
     width: 120px;
     height: 34px;
+}
+
+.oikein {
+    background-color: #F58220;
+}
+
+#total {
+    font-family: Finger Paint, cursive;
+}
+
+#prize {
+    max-width: 30%;
+}
+
+.hided {
+    display: none;
 }
 
 /* Tietovisa */
