@@ -18,7 +18,8 @@ Markus Erkkilä, Matleena Autio, Santeri Pirilä, Akseli Keinänen, Vadim Panfil
 
 
 main {
-    background: linear-gradient(to top, #F2EDDB 0%, #D4E3FB 100%); 
+    background: linear-gradient(to top, #F58220 0%, #F5EEBE 100%); 
+
 }
 
 .dropdown-menu {
@@ -33,6 +34,7 @@ a:hover {
 
 header {
     background-color: #F5EEBE;
+    
 }
 
 .logo {
@@ -80,9 +82,12 @@ main {
 /* FOOTER */
 
 footer {
-    background-color: #9a9c9e;
+    background-color: #F58220;
     width: 100%;
     padding: 10px;
+    border-top-style: solid;
+    border-width: 5px;
+    border-color: #F5EEBE;
 }
 
 .smiley {
