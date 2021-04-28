@@ -84,20 +84,22 @@ $(function(){
 
         $(".kysymys5").prop("disabled", true);
 
-        let palkinto1 = $("#prize1").val();
-        let palkinto2 = $("#prize2").val();
-        let palkinto3 = $("#prize3").val();
+    });
+
+    // Lunasta palkintosi
+    $("#prize").on("click", function(){
+
+        let palkinto1 = $("#prize1").html();
+        let palkinto2 = $("#prize2").html();
+        let palkinto3 = $("#prize3").html();
 
         if (oikeat_vastaukset === 5) {
-            $("#prize").removeClass("hided");
-            $("#prize").html(palkinto1);
+            $("#prizelist").removeClass("hided").html(palkinto1);
             
         } else if (oikeat_vastaukset >= 3) {
-            $("#prize").removeClass("hided");
-            $("#prize").html(palkinto2);
+            $("#prizelist").removeClass("hided").html(palkinto2);
         } else {
-            $("#prize").removeClass("hided");
-            $("#prize").html(palkinto3);
+            $("#prizelist").removeClass("hided").html(palkinto3);
         }
 
     });
