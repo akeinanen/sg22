@@ -96,3 +96,8 @@ footer {
 .etusivu-kortti {
     background-color: rgb(243, 241, 237);
 }
+
+.etusivu-kortti:hover {
+    box-shadow: 0px 5px 12px;
+    transition: 0.2s ease-in;
+}
