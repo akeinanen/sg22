@@ -82,7 +82,7 @@ main {
 /* FOOTER */
 
 footer {
-    background-color: white;
+    background-color: rgb(243, 230, 230);
     width: 100%;
     padding: 10px;
 }
@@ -91,3 +91,8 @@ footer {
     width: 5em;
 }
 
+/* Etusivun kortit */
+
+.etusivu-kortti {
+    background-color: rgb(243, 230, 230);
+}
