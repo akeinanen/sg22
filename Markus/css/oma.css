@@ -1,6 +1,6 @@
 h1 {
     font-family: 'Finger Paint', cursive;
-    color: coral;
+    color: #6666ff;
     padding: 1em;
 }
 
@@ -16,10 +16,11 @@ li {
 }
 
 .otsikko {
-    background-color: #ff9933;
+    background-color: #6666ff;
     padding: 1em;
     border-radius: 3px;
     font-weight: bold;
+    color: white;
 }
 
 .center {
