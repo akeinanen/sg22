@@ -4,15 +4,21 @@ h1 {
     padding: 1em;
 }
 
-ul {
+.visa1 {
     list-style-type: none;
     padding-left: 2em;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-li {
+.visa1 li {
     padding: 0.5em;
+}
+
+.visa2 {
+    max-width: 600px;
+    height: 300px;
+    margin: 10px auto;
 }
 
 .otsikko {
@@ -30,25 +36,41 @@ li {
 }
 
 .kehys {
-    border-radius: 1px;
-    border-color: blueviolet;
+    border-radius: 5px;
+    border-color: rgb(0, 0, 0);
     border-style: groove;
     padding: 2em;
-    background-color: violet;
+    background-color: #ff884d;
     color: whitesmoke;
     font-size: large;
-    font-weight: bold;
-    height: 300px;
-    
+    font-weight: bold;   
 }
 
-#vastaa2 {
-    max-width: 100px;
+#eka_nro, #toka_nro, #kerto, #yhtäkuin {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
 }
 
 #eka_nro {
-    border-style: groove;
-    border-radius: 1px;
-    border-color: black;
-    
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 3px;
+    border-color: #00cc00;
 }
+
+#toka_nro {
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 3px;
+    border-color: rgba(255, 255, 0, 0.459);
+}
+
+#vastaus2 {
+    max-width: 100px;
+}
+
