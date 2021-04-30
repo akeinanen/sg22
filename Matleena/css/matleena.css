@@ -37,10 +37,6 @@ h3 {
     height: 34px;
 }
 
-.oikein {
-    background-color: #F58220;
-}
-
 #total {
     font-family: Finger Paint, cursive;
 }
@@ -55,17 +51,20 @@ h3 {
 
 /* Tietovisa */
 
-h2 {
-    font-family: Finger Paint, cursive;
-    color: #5271FF;
-    margin-top: 20px;
-}
-
 button {
     background-color: #5271FF;
     border: none;
-    width: 350px;
+    width: 300px;
     height: 44px;
     border-radius: 8px;
     margin: 5px;
+}
+
+.väärä {
+    background-color: red;
+}
+
+.maapallo {
+    max-width: 200px;
+    margin-bottom: 20px;
 }

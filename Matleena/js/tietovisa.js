@@ -4,18 +4,92 @@
 
 $(function(){
 
-    $("[name=kysymys1]").on("click", function(){
+    let oikeat_vastaukset = 0;
 
-        let valinta = $("this").val();
+    $(".kysymys1").on("click", function(){
+
+        let valinta = Number($(this).val());
 
         if (valinta === 1) {
-            $("#tulos1").html("Hienoa! Vastasit oikein!");
+            $(".eka").addClass("hided");
+            $(".toka").removeClass("hided");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
         } else {
-            $("#tulos1").html("Höh! Vastasit valitettavasti väärin.");
+            $(this).addClass("väärä");
+            $("#tulos1").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
         }
+
+        $(".kysymys1").prop("disabled", true);
     });
 
+    $(".kysymys2").on("click", function(){
 
+        let valinta = Number($(this).val());
 
+        if (valinta === 1) {
+            $(".toka").addClass("hided");
+            $(".kolmas").removeClass("hided");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
+        } else {
+            $(this).addClass("väärä");
+            $("#tulos2").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+        }
+
+        $(".kysymys2").prop("disabled", true);
+    });
+
+    $(".kysymys3").on("click", function(){
+
+        let valinta = Number($(this).val());
+
+        if (valinta === 1) {
+            $(".kolmas").addClass("hided");
+            $(".neljäs").removeClass("hided");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
+        } else {
+            $(this).addClass("väärä");
+            $("#tulos3").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+        }
+
+        $(".kysymys3").prop("disabled", true);
+    });
+
+    $(".kysymys4").on("click", function(){
+
+        let valinta = Number($(this).val());
+
+        if (valinta === 1) {
+            $(".neljäs").addClass("hided");
+            $(".viides").removeClass("hided");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
+        } else {
+            $(this).addClass("väärä");
+            $("#tulos4").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+        }
+
+        $(".kysymys4").prop("disabled", true);
+    });
+
+    $(".kysymys5").on("click", function(){
+
+        let valinta = Number($(this).val());
+
+        if (valinta === 1) {
+            $(".viides").addClass("hided");
+            $(".ohjeet").addClass("hided");
+            $(".tulokset").removeClass("hided");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
+        } else {
+            $(this).addClass("väärä");
+            $("#tulos5").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+        }
+
+        $(".kysymys5").prop("disabled", true);
+
+        $("#pisteet").html("Pisteesti: " + oikeat_vastaukset + "/5");
+
+    });
+
+    
 
 });
