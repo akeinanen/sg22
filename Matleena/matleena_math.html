@@ -22,28 +22,23 @@
     </header>
     
     <main class="container-fluid">
-        <section class="row kysymykset">
+        <section class="row ohjeet">
             <div class="col-12">
                 <h1 class="text-center">Matikkavisa</h1>
             </div>
-            <div class="col-sm-12 col-md-4 text-center">
+            <div class="col-sm-12 col-md-12 text-center">
                 <h3>01</h3>
                 <p>Visassa on viisi kysymystä ja jokaisessa on kolme vastausvaihtoehtoa.</p>
-            </div>
-            <div class="col-sm-12 col-md-4 text-center">
                 <h3>02</h3>
                 <p>Valitse mielestäsi oikea vastaus. Vastausta ei voi vaihtaa!</p>
-            </div>
-            <div class="col-sm-12 col-md-4 text-center">
                 <h3>03</h3>
                 <p>Katso tulokset visan lopusta ja lunasta palkintosi.</p>
             </div>
-            <hr class="col-12">
         </section>
 
         <section class="row kysymykset">
             <div class="col-sm-12 col-md-4">
-                <p>1. Kuinka paljon on 3 x 5?</p>
+                <h4>1. Kuinka paljon on 3 x 5?</h4>
                 <ul>
                     <li>
                         <input type="radio" id="valinta1" name="vastaus" class="kysymys1" value="1">
@@ -59,10 +54,10 @@
                     </li>
                 </ul>
                 <button class="matikka" id="vastaa1">Vastaa</button>
-                <p id="tulos1">Vastauksesi on...</p>
+                <p id="tulos1"></p>
             </div>  
             <div class="col-sm-12 col-md-4">
-                <p>2. Kuinka paljon on 4 x 6?</p>
+                <h4>2. Kuinka paljon on 4 x 6?</h4>
                 <ul>
                     <li>
                         <input type="radio" id="valinta4" name="vastaus2" class="kysymys2" value="0">
@@ -78,16 +73,10 @@
                     </li>
                 </ul>
                 <button class="matikka" id="vastaa2">Vastaa</button>
-                <p id="tulos2">Vastauksesi on...</p>
+                <p id="tulos2"></p>
             </div>
-            <figure class="col-sm-10 col-md-3">
-                <img src="img/Visan säännöt.png" alt="säännöt" class="tsemppiä img-fluid">
-            </figure>
-        </section>  
-
-        <section class="row kysymykset">
             <div class="col-sm-12 col-md-4">
-                <p>3. Kuinka paljon on 7 x 6?</p>
+                <h4>3. Kuinka paljon on 7 x 6?</h4>
                 <ul>
                     <li>
                         <input type="radio" id="valinta7" name="vastaus3" class="kysymys3" value="0">
@@ -103,10 +92,14 @@
                     </li>
                 </ul>
                 <button class="matikka" id="vastaa3">Vastaa</button>
-                <p id="tulos3">Vastauksesi on...</p>
+                <p id="tulos3"></p>
             </div>
+            
+        </section>  
+
+        <section class="row kysymykset">
             <div class="col-sm-12 col-md-4">
-                <p>4. Kuinka paljon on 5 x 8?</p>
+                <h4>4. Kuinka paljon on 5 x 8?</h4>
                 <ul>
                     <li>
                         <input type="radio" id="valinta10" name="vastaus4" class="kysymys4" value="0">
@@ -122,11 +115,11 @@
                     </li>
                 </ul>
                 <button class="matikka" id="vastaa4">Vastaa</button>
-                <p id="tulos4">Vastauksesi on...</p>
+                <p id="tulos4"></p>
             </div>    
 
             <div class="col-sm-12 col-md-4">
-                <p>5. Kuinka paljon on 8 x 9?</p>
+                <h4>5. Kuinka paljon on 8 x 9?</h4>
                 <ul>
                     <li>
                         <input type="radio" id="valinta13" name="vastaus5" class="kysymys5" value="1">
@@ -142,14 +135,33 @@
                     </li>
                 </ul>
                 <button class="matikka" id="vastaa5">Vastaa</button>
-                <p id="tulos5">Vastauksesi on...</p>
-            </div>    
+                <p id="tulos5"></p>
+            </div>  
+            <div class="col-sm-12 col-md-4">
+                <h4>6. Kuinka paljon on 7 x 3 ?</h4>
+                <ul>
+                    <li>
+                        <input type="radio" id="valinta16" name="vastaus6" class="kysymys6" value="0">
+                        <label for="valinta13">19</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta17" name="vastaus6" class="kysymys6" value="1">
+                        <label for="valinta14">21</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="valinta18" name="vastaus6" class="kysymys6" value="0">
+                        <label for="valinta15">27</label>
+                    </li>
+                </ul>
+                <button class="matikka" id="vastaa6">Vastaa</button>
+                <p id="tulos6"></p>
+            </div>   
         </section>
 
-        <section class="row">
+        <section class="row tulokset hided">
             <div class="col-12 text-center">
                 <h3>Vastasit oikein:</h3>
-                <h2 id="total"></h2>
+                <h4 id="total"></h4>
             </div>
             <div class="col-12 text-center">
                 <button class="prizes" id="prize">Lunasta palkintosi!</button>

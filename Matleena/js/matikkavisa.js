@@ -86,6 +86,25 @@ $(function(){
 
     });
 
+    $("#vastaa6").on("click", function(){
+
+        let valinta = $("[name=vastaus6]:checked").val();
+
+        if (valinta === "1") {
+            $("#tulos6").html("Hyvä! Vastaus on oikein.");
+            oikeat_vastaukset = oikeat_vastaukset + 1;
+            $("#total").html(oikeat_vastaukset + " kysymykseen!");
+        } else {
+            $("#tulos6").html("Höh! Nyt meni mönkään.");
+        }
+
+        $(".kysymys6").prop("disabled", true);
+
+    });
+
+
+    
+    $(".tulokset").removeClass("hided");
     // Lunasta palkintosi
     $("#prize").on("click", function(){
 
@@ -93,7 +112,7 @@ $(function(){
         let palkinto2 = $("#prize2").html();
         let palkinto3 = $("#prize3").html();
 
-        if (oikeat_vastaukset === 5) {
+        if (oikeat_vastaukset === 6) {
             $("#prizelist").removeClass("hided").html(palkinto1);
             
         } else if (oikeat_vastaukset >= 3) {

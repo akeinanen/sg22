@@ -17,6 +17,8 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos1").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+            $("#pisteet1").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#uusipeli").removeClass("hided");
         }
 
         $(".kysymys1").prop("disabled", true);
@@ -33,6 +35,8 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos2").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+            $("#pisteet2").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#uusipeli2").removeClass("hided");
         }
 
         $(".kysymys2").prop("disabled", true);
@@ -49,6 +53,8 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos3").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+            $("#pisteet3").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#uusipeli3").removeClass("hided");
         }
 
         $(".kysymys3").prop("disabled", true);
@@ -65,6 +71,8 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos4").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+            $("#pisteet4").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#uusipeli4").removeClass("hided");
         }
 
         $(".kysymys4").prop("disabled", true);
@@ -82,14 +90,19 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos5").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
+            $("#pisteet5").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#uusipeli5").removeClass("hided");
         }
 
         $(".kysymys5").prop("disabled", true);
 
-        $("#pisteet").html("Pisteesti: " + oikeat_vastaukset + "/5");
+        $("#total").html("Pisteesti: " + oikeat_vastaukset + "/5");
 
     });
 
-    
+    $(".aloita").on("click", function(){
+
+        window.location.reload();
+    });
 
 });
