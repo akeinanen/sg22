@@ -2,9 +2,9 @@
 
 // Markus Erkkilä
 
-$(function() {
+$(function () {
 
-    $("#vastaa").on("click", function () {  
+    $("#vastaa").on("click", function () {
         let oikein = 0;
         let vastaus1 = $("[name=vastaus1]:checked").val();
         let vastaus2 = $("[name=vastaus2]:checked").val();
@@ -27,31 +27,44 @@ $(function() {
         if (vastaus5 === "1") {
             oikein += 1;
         }
-        
+
         $("#tulos").html("Vastasit oikein " + oikein + " " + "/ 5 kysymyksestä");
     })
-    
-    $("#alusta").on("click", function() {
+
+    $("#alusta").on("click", function () {
         $("#tulos").html("");
-        $(window).scrollTop(0);  
+        $(window).scrollTop(0);
         $('input[name=vastaus1]').prop('checked', false);
-        $('input[name=vastaus2]').prop('checked', false); 
-        $('input[name=vastaus3]').prop('checked', false); 
+        $('input[name=vastaus2]').prop('checked', false);
+        $('input[name=vastaus3]').prop('checked', false);
         $('input[name=vastaus4]').prop('checked', false);
-        $('input[name=vastaus5]').prop('checked', false);    
+        $('input[name=vastaus5]').prop('checked', false);
     });
+
+
+    //toinen visa
+
 
     function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) ) + min;
-      }
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
 
-    $("#vastaa2").on("click", function() {
-        //laske kerto
-        //lukujen pitää näykä ennen napin painallusta
-        let number1 = getRndInteger(1, 10);
-        let number2 = getRndInteger(1, 10);
-        let tulo = number1 * number2;
+    let number1 = getRndInteger(1, 10);
+    let number2 = getRndInteger(1, 10);
+    let tulo = number1 * number2;
 
+    $("#eka_nro").html(number1);
+    $("#toka_nro").html(number2);
+
+    $("#vastaa2").on("click", function () {
+        let vastaus = Number($("#vastaus2").val());
+        if (vastaus === tulo) {
+            alert("Oikein!");
+            window.location.reload();
+        } else {
+            alert("Väärä vastaus :(");
+            window.location.reload();
+        }
     });
-    
+
 })
