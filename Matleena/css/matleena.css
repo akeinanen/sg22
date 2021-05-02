@@ -19,7 +19,12 @@ h1 {
 
 h3 {
     font-family: Finger Paint, cursive;
-    color: #F58220;
+    color: #5271FF;
+}
+
+h4 {
+    font-family: Finger Paint;
+    color: #5271FF;
 }
 
 .tsemppiä {
@@ -27,18 +32,15 @@ h3 {
 }
 
 .kysymykset {
+    margin-top: 30px;
     margin-right: 20px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .matikka {
     background-color: #5271FF;
     width: 120px;
     height: 34px;
-}
-
-.oikein {
-    background-color: #F58220;
 }
 
 #total {
@@ -53,19 +55,28 @@ h3 {
     display: none;
 }
 
+
 /* Tietovisa */
 
-h2 {
-    font-family: Finger Paint, cursive;
-    color: #5271FF;
-    margin-top: 20px;
-}
-
 button {
-    background-color: #F58220;
+    background-color: #5271FF;
     border: none;
-    width: 350px;
+    width: 300px;
     height: 44px;
     border-radius: 8px;
     margin: 5px;
+}
+
+.väärä {
+    background-color: red;
+}
+
+button:hover {
+    box-shadow: 0px 5px 12px;
+    transition: 0.2s ease-in;
+}
+
+.maapallo {
+    max-width: 200px;
+    margin-bottom: 20px;
 }

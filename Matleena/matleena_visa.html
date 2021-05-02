@@ -23,105 +23,122 @@
     <main class="container-fluid">
         <section class="row">
             <div class="col-sm-12 col-md-12">
-                <h2 class="text-center">Tietovisa Euroopan pääkaupungeista.</h2>
-                <p class="text-center">Tässä tietovisassa testataan osaatko yhdistää Euroonpan maan ja sen pääkaupungin.
-                    Kysymyksiä on yhteensä viisi.</p>
+                <h1 class="text-center">Tunnetko Euroopan maiden pääkaupungit?</h1>
+                <p class="ohjeet text-center">Osaatko yhdistää Euroonpan maan ja sen pääkaupungin? <br>
+                    Mikäli vastaat kysymykseen oikein pääset siirtymään seuraavaan kysymykseen!
+                    Kysymyksiä on yhteensä kuusi.</p>
             </div>
         </section>
         <section class="row">
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 eka">
                 <h5 class="text-center text-md-center">1. Mikä on Ruotsin pääkaupunki?</h3>
                     <ul class="text-center">
                         <li>
-                            <button id="vastaus1" name="kysymys1" class="ruotsi" value="0">
+                            <button id="vastaus1" class="kysymys1" value="0">
                                 Rooma</button>
                         </li>
                         <li>
-                            <button id="vastaus2" name="kysymys1" class="ruotsi" value="0">
+                            <button id="vastaus2" class="kysymys1" value="0">
                                 Tallinna</button>
                         </li>
                         <li>
-                            <button id="vastaus3" name="kysymys1" class="ruotsi" value="1">
+                            <button id="vastaus3" class="kysymys1" value="1">
                                 Tukholma</button>
                         </li>
                     </ul>
-                <p class="text-center" id="tulos1">Vastaus on:</p>    
+                <p class="text-center" id="tulos1"></p>   
+                <p class="text-center" id="pisteet1"></p> 
+                <h3 class="text-center hided aloita" id="uusipeli">Paina tästä ja aloita visa alusta.</h3>
             </div>
 
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 toka hided">
                 <h5 class="text-center">2. Mikä on Saksan pääkaupunki?</h3>
                     <ul class="text-center">
                         <li>
-                            <button id="vastaus4" name="kysymys2" class="saksa" value="1">
+                            <button id="vastaus4" class="kysymys2" value="1">
                                 Berliini</button>
                         </li>
                         <li>
-                            <button id="vastaus5" name="kysymys2" class="saksa" value="0">
+                            <button id="vastaus5" class="kysymys2" value="0">
                                 Riika</button>
                         </li>
                         <li>
-                            <button id="vastaus6" name="kysymys2" class="saksa" value="0">
-                                Ateena</button>
+                            <button id="vastaus6" class="kysymys2" value="0">
+                                Bern</button>
                         </li>
                     </ul>
-                    <p class="text-center" id="tulos2">Vastaus on:</p>    
+                    <p class="text-center" id="tulos2"></p>
+                    <p class="text-center" id="pisteet2"></p>
+                    <h3 class="text-center hided aloita" id="uusipeli2">Paina tästä ja aloita visa alusta.</h3>   
             </div>
 
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 kolmas hided">
                 <h5 class="text-center">3. Mikä on Espanjan pääkaupunki?</h3>
                     <ul class="text-center">
                         <li>
-                            <button id="vastaus7" name="kysymys3" class="espanja" value="0">
+                            <button id="vastaus7" class="kysymys3" value="0">
                                 Ateena</button>
                         </li>
                         <li>
-                            <button id="vastaus8" name="kysymys3" class="espanja" value="1">
+                            <button id="vastaus8" class="kysymys3" value="1">
                                 Madrid</button>
                         </li>
                         <li>
-                            <button id="vastaus9" name="kysymys3" class="espanja" value="0">
+                            <button id="vastaus9" class="kysymys3" value="0">
                                 Lontoo</button>
                         </li>
                     </ul>
-                    <p class="text-center" id="tulos3">Vastaus on:</p> 
+                    <p class="text-center" id="tulos3"></p>
+                    <p class="text-center" id="pisteet3"></p>
+                    <h3 class="text-center hided aloita" id="uusipeli3">Paina tästä ja aloita visa alusta.</h3> 
             </div>
 
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 neljäs hided">
                 <h5 class="text-center">4. Mikä on Ranskan pääkaupunki?</h3>
                     <ul class="text-center">
                         <li>
-                            <button id="vastaus10" name="kysymys4" class="ranska" value="0">
+                            <button id="vastaus10" class="kysymys4" value="0">
                                 Wien</button>
                         </li>
                         <li>
-                            <button id="vastaus11" name="kysymys4" class="ranska" value="0">
+                            <button id="vastaus11" class="kysymys4" value="0">
                                 Bryssel</button>
                         </li>
                         <li>
-                            <button id="vastaus12" name="kysymys4" class="ranska" value="1">
+                            <button id="vastaus12" class="kysymys4" value="1">
                                 Pariisi</button>
                         </li>
                     </ul>
-                    <p class="text-center" id="tulos4">Vastaus on:</p> 
+                    <p class="text-center" id="tulos4"></p>
+                    <p class="text-center" id="pisteet4"></p>
+                    <h3 class="text-center hided aloita" id="uusipeli4">Paina tästä ja aloita visa alusta.</h3> 
             </div>
 
-            <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 viides hided">
                 <h5 class="text-center">5. Mikä on Tanskan pääkaupunki?</h3>
                     <ul class="text-center">
                         <li>
-                            <button id="vastaus13" name="kysymys5" class="tanska" value="0">
+                            <button id="vastaus13" class="kysymys5" value="0">
                                 Amsterdam</button>
                         </li>
                         <li>
-                            <button id="vastaus14" name="kysymys5" class="tanska" value="1">
+                            <button id="vastaus14" class="kysymys5" value="1">
                                 Kööpenhamina</button>
                         </li>
                         <li>
-                            <button id="vastaus15" name="kysymys5" class="tanska" value="0">
+                            <button id="vastaus15" class="kysymys5" value="0">
                                 Budapest</button>
                         </li>
                     </ul>
-                    <p class="text-center" id="tulos5">Vastaus on:</p> 
+                    <p class="text-center" id="tulos5"></p> 
+                    <p class="text-center" id="pisteet5"></p>
+                    <h3 class="text-center hided aloita" id="uusipeli5">Paina tästä ja aloita visa alusta.</h3>
+            </div>
+            <div class="col-sm-12 col-md-12 text-center tulokset hided">
+                <h3>Onneksi olkoon! <br> 
+                    Osasit vastata oikein kaikkiin kysymyksiin.</h3>
+                <h3 id="total"></h3>
+                <img src="img/world.png" alt="maapallo" class="maapallo img-fluid">
             </div>
         
 
