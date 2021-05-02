@@ -13,7 +13,7 @@ ul {
 h1 {
     font-family: Finger Paint;
     color: #F58220;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 30px
 }
 
@@ -79,4 +79,8 @@ button:hover {
 .maapallo {
     max-width: 200px;
     margin-bottom: 20px;
+}
+
+h5 {
+    margin-top: 20px;
 }
