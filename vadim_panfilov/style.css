@@ -60,8 +60,8 @@
     font-family: 'Quicksand', sans-serif;
   }
 
-h1 {
-  color: #F58220;
+h1,h5 {
+  color:white;
 }
 
 .kysymys {
@@ -75,7 +75,19 @@ h1 {
     max-width: 140px;
 }
 
+#background { /** Jalkapallovisan background **/
+  background-image: url('img/background_sward_football.jpg');
+  background-size: cover;
+}
 
+img {
+  max-width: 50%; 
+  height: auto;
+}
+ 
+li {
+  color:white;
+}
   
 
 

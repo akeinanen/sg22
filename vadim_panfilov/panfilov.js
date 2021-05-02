@@ -2,6 +2,8 @@
 
 $(function () {
 
+    let counter = 0;
+
     $(".btn").on("click", function () {
 
         if ($(this).hasClass("first")) {
@@ -9,14 +11,13 @@ $(function () {
             let vastaus = Number($('input[name=first]:checked').val());
 
             if (vastaus === 1) {
-
-                $("#result1").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+                $("#result1").html("Oikea vastaus!");
                 $("#result1").addClass("selected");
+                counter++
             } else {
 
                 $('#result1').html("Kokeile uudelleen");
                 $("#result1").removeClass("selected");
-
             }
 
 
@@ -26,8 +27,9 @@ $(function () {
 
             if (vastaus === 1) {
 
-                $("#result2").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+                $("#result2").html("Oikea vastaus!");
                 $("#result2").addClass("selected");
+                counter++
             } else {
 
                 $('#result2').html("Kokeile uudelleen");
@@ -41,8 +43,9 @@ $(function () {
 
             if (vastaus === 1) {
 
-                $("#result3").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+                $("#result3").html("Oikea vastaus!");
                 $("#result3").addClass("selected");
+                counter++
             } else {
 
                 $('#result3').html("Kokeile uudelleen");
@@ -55,8 +58,9 @@ $(function () {
 
             if (vastaus === 1) {
 
-                $("#result4").html("Hyvä!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+                $("#result4").html("Hyvä!");
                 $("#result4").addClass("selected");
+                counter++
             } else {
 
                 $('#result4').html("Kokeile uudelleen");
@@ -69,14 +73,24 @@ $(function () {
 
             if (vastaus === 1) {
 
-                $("#result5").html("Oikea vastaus!" + '<i class="fa fa-smile-o" aria-hidden="true"></i>');
+                $("#result5").html("Oikea vastaus!");
                 $("#result5").addClass("selected");
+                counter++
             } else {
 
                 $('#result5').html("Kokeile uudelleen");
                 $("#result5").removeClass("selected");
             }
         }
+
+    });
+
+    $("#result10").on("click", function(){ // laskea oikeat vastaukset button
+       if(counter >= 3) {
+        $("#pisteet").html("Pisteet: " + counter + "/5");
+       } else {
+        $("#pisteet").html("Pisteet: " + counter + "/5");
+       }
     });
 
     // tyhjennetaan edelliset resultit
