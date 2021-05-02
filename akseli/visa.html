@@ -57,12 +57,59 @@
                 </div>
             
                 <div class="text-center">
-                    <button id="answer-1" class="button btn-primary mt-5 p-3" data-hide="question-1" data-show="question-2">Vastaa</button>
+                    <button id="answer-1" class="answer-button button btn-primary mt-5 p-3" data-hide="question-1" data-show="question-2">Vastaa</button>
                 </div>
             </div>
 
             <div id="question-2" style="display: none;">
-                <h1 class="text-center">Kysymys 2</h1>
+                <h3 class="text-center">Kysymys 2</h3>
+                <p class="text-center">Mikä seuraavista muuttujan x arvo pitää olla, jotta x on tosi</p>
+                <div class="d-flex" style="justify-content: center;">
+                    <div style="display: inline-block">
+                        <div>
+                            <input value="1" name="question2" type="radio">
+                            <label for="checkbox2">let x == 3;</label>
+                        </div>
+
+                        <div>
+                            <input value="2" name="question2" type="radio">
+                            <label for="checkbox3">let x = !1;</label>
+                        </div>
+
+                        <div>
+                            <input value="3" name="question2" type="radio">
+                            <label for="checkbox2">let x = 0;</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="answer-2" class="answer-button button btn-primary mt-5 p-3" data-hide="question-2" data-show="question-3">Vastaa</button>
+                </div>
+            </div>
+            <div id="question-3" style="display: none;">
+                <h3 class="text-center">Kysymys 3</h3>
+                <p class="text-center">Mitä seuraava koodi tulostaa konsoliin kun x:n arvo on 0?<br/>x ? console.log("Skole on"); : console.log("paras");</p>
+                <div class="d-flex" style="justify-content: center;">
+                    <div style="display: inline-block">
+                        <div>
+                            <input value="1" name="question3" type="radio">
+                            <label for="checkbox2">undefined</label>
+                        </div>
+
+                        <div>
+                            <input value="2" name="question3" type="radio">
+                            <label for="checkbox3">Skole on paras</label>
+                        </div>
+
+                        <div>
+                            <input value="3" name="question3" type="radio">
+                            <label for="checkbox2">Skole on</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="answer-3" class="answer-button button btn-primary mt-5 p-3" data-hide="question-3" data-show="question-4">Vastaa</button>
+                </div>
             </div>
 
             <div id="notification" class="d-flex" style="justify-content: center;">
