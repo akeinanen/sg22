@@ -87,6 +87,12 @@ footer {
     padding: 10px;
 }
 
+.prefooter {
+    background-color: rgb(243, 241, 237);
+    width: 100%;
+    padding-top: 10px;
+}
+
 .smiley {
     width: 5em;
 }
@@ -106,7 +112,7 @@ footer {
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
+    width: 324px;
     height: 300px;
     perspective: 1000px;
   }
@@ -141,5 +147,6 @@ footer {
   .flip-card-back {
    /* background-color: ; */
     color: white;
+    background-color: var(--orange);
     transform: rotateY(180deg);
   }

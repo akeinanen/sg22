@@ -14,7 +14,7 @@ $(function() {
         $("#triesLeft").html(`Yritykset: ${triesLeft}`);
     };
 
-    function gameOver() {
+    function gameOver(rightAnswer) {
         triesLeft = 3;
         clearGame();
         $("#game-container").hide();
@@ -38,7 +38,13 @@ $(function() {
     // Answer events
 
     function answer(id, rightAnswer) {
-        let answer = $(`[name='question${id}']:checked`).val();
+        let answer;
+        if(id === 5) {
+            answer = $("#lastAnswer").val().toLowerCase();
+        } else {
+            answer = $(`[name='question${id}']:checked`).val();
+        }
+
         if(!answer) {
             notification("warning", "Mikäli valinnan vaikeus tuottaa sinulle ongelmia, suosittelen vaihtamaa visaa");
         } else if(answer === rightAnswer) {
@@ -48,10 +54,12 @@ $(function() {
             triesLeft--;
             $("#triesLeft").html(`Yritykset: ${triesLeft}`);
             if(triesLeft < 1) {
-                gameOver();
+                gameOver($(`[name='question${id}'][value='${rightAnswer}']`));
             }
         }
     }
+
+    // Click events, undynamic mess :,)
 
     $("#answer-1").on("click", function() {
         answer(1, "2");
@@ -62,27 +70,14 @@ $(function() {
     })
 
     $("#answer-3").on("click", function() {
-        answer(2, "3");
+        answer(3, "3");
     })
 
-   /* $("#answer-1").on("click", function() {
-        let answer = $("[name='question1']:checked").val();
-        if(answer === "2") {
-            nextPage(this)
-        } else if(answer === "1" || answer === "3") {
-            notification("danger", "Auts, vastasit väärin!");
-            triesLeft--;
-            $("#triesLeft").html(`Yritykset: ${triesLeft}`);
-            if(triesLeft < 1) {
-                gameOver();
-            }
-        } else if(!answer) {
-            notification("warning", "Mikäli valinnan vaikeus tuottaa sinulle ongelmia, suosittelen seuraamaan tätä linkkiä")
-        }
-    });
-    $("#answer-2").on("click", function() {
-        let answer = $("[name='question1']:checked").val();
-    */ 
-   
-    
+    $("#answer-4").on("click", function() {
+        answer(4, "2");
+    })
+
+    $("#answer-5").on("click", function() {
+        answer(5, "not a number");
+    })
 })
