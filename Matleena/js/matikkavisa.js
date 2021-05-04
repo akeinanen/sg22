@@ -100,27 +100,9 @@ $(function(){
 
         $(".kysymys6").prop("disabled", true);
 
-    });
-
-
-    
-    $(".tulokset").removeClass("hided");
-    // Lunasta palkintosi
-    $("#prize").on("click", function(){
-
-        let palkinto1 = $("#prize1").html();
-        let palkinto2 = $("#prize2").html();
-        let palkinto3 = $("#prize3").html();
-
-        if (oikeat_vastaukset === 6) {
-            $("#prizelist").removeClass("hided").html(palkinto1);
-            
-        } else if (oikeat_vastaukset >= 3) {
-            $("#prizelist").removeClass("hided").html(palkinto2);
-        } else {
-            $("#prizelist").removeClass("hided").html(palkinto3);
-        }
+        $(".tulokset").removeClass("hided");
 
     });
+
 
 });

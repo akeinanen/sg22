@@ -41,6 +41,7 @@ h4 {
     background-color: #5271FF;
     width: 120px;
     height: 34px;
+    color: white;
 }
 
 #total {
@@ -60,6 +61,7 @@ h4 {
 
 button {
     background-color: #5271FF;
+    color: white;
     border: none;
     width: 300px;
     height: 44px;
@@ -74,6 +76,10 @@ button {
 button:hover {
     box-shadow: 0px 5px 12px;
     transition: 0.2s ease-in;
+}
+
+.aloita:hover {
+    background-color: #F58220;
 }
 
 .maapallo {
