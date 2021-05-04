@@ -8,12 +8,14 @@
 
 
 
-
-
 /* PELI */
 
 #gameScreen {
+    display: block;
+    margin: auto;
     border: 1px solid black;
+    border-bottom: 0; 
+    box-shadow: 0px 0px 30px 10px #ffffff13;
 }
 
 .gameObject{

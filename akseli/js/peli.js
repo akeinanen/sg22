@@ -2,14 +2,21 @@
 /* PUBLIC FUNCTIONS */
 
 let level1 = [
-    [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
-    [1, 0, 1, 1, 1, 1, 0, 1, 1, 0],
+    [0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+    [],
 ]
 
 
 let level2 = [
     [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
     [1, 0, 1, 1, 1, 1, 0, 1, 1, 0],
+]
+
+let level3 = [
+    [1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
+    [1, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+    [1, 0, 0, 1, 0, 1, 0, 1, 0, 1],
+    [0, 0, 0, 0, 1, 0, 0, 0, 1, 0]
 ]
 
 
@@ -121,13 +128,13 @@ class Paddle {
         }
 
 
-        this.maxSpeed = 8;
+        this.maxSpeed = 8
         this.speed = 0;
     }
 
     draw(ctx) {
 
-        ctx.fillStyle = '#ffff';
+        ctx.fillStyle = 'snow';
 
         ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
 
@@ -165,13 +172,13 @@ class Ball {
         this.game = game;
 
         this.position = { x: 10, y: 400 };
-        this.speed = { x: 2, y: -2 };
+        this.speed = { x: 3 * (game.currentLevel + 1), y: -3 * (game.currentLevel + 1) };
         this.size = 30;
     }
 
     reset() {
         this.position = { x: 10, y: 400 };
-        this.speed = { x: 2, y: -2 };
+        this.speed = { x: 3 * (game.currentLevel + 1), y: -3 * (game.currentLevel + 1) };
     }
 
     draw(ctx) {
@@ -247,14 +254,14 @@ class Game {
         this.paddle = new Paddle(this);
         new InputHandler(this.paddle);
 
-        this.levels = [level1, level2];
+        this.levels = [level1, level2, level3];
 
         this.currentLevel = 0;
     }
 
     start() {
 
-        if (this.gamestate !== GAMESTATE.MENU && this.gamestate !== GAMESTATE.NEWLEVEL) return;
+        if (this.gamestate !== GAMESTATE.MENU && this.gamestate !== GAMESTATE.NEWLEVEL && this.gamestate !== GAMESTATE.OVER) return;
 
         this.tiles = buildLevel(this, this.levels[this.currentLevel]);
 
