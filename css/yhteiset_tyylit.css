@@ -19,7 +19,6 @@ Markus Erkkilä, Matleena Autio, Santeri Pirilä, Akseli Keinänen, Vadim Panfil
 
 main {
     background: linear-gradient(to top, #F58220 0%, #F5EEBE 100%); 
-
 }
 
 .dropdown-menu {
@@ -77,6 +76,12 @@ header {
 
 main {
     min-height: 70vh;
+}
+
+h3 {
+    font-family: 'Finger Paint', cursive;
+    color:#F58220;
+    margin-top: 20px;
 }
 
 /* FOOTER */

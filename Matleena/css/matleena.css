@@ -90,3 +90,12 @@ button:hover {
 h5 {
     margin-top: 20px;
 }
+
+.palkinto {
+    margin-bottom: 10px;
+    max-width: 100px;
+}
+
+.aloita {
+    margin-bottom: 20px;
+}

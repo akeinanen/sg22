@@ -12,7 +12,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos1").html("Hienoa! Vastauksesi on oikein.");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos1").html("Höh! Vastasit väärin.");
@@ -28,7 +28,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos2").html("Jes! Vastasit oikein.");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos2").html("Voi harmi! Väärin meni.");
@@ -44,7 +44,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos3").html("Hyvä!");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos3").html("Voi harmi. Nyt meni väärin.");
@@ -60,7 +60,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos4").html("Hienoa! Oikein meni.");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos4").html("Höh! Vastaus on väärin.");
@@ -76,7 +76,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos5").html("Jes! Vastaus on oikein.");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos5").html("Höh! Nyt meni mönkään.");
@@ -92,7 +92,7 @@ $(function(){
 
         if (valinta === "1") {
             $("#tulos6").html("Hyvä! Vastaus on oikein.");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
             $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos6").html("Höh! Nyt meni mönkään.");

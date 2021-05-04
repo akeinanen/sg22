@@ -13,15 +13,17 @@ $(function(){
         if (valinta === 1) {
             $(".eka").addClass("hided");
             $(".toka").removeClass("hided");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
         } else {
             $(this).addClass("väärä");
             $("#tulos1").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
             $("#pisteet1").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $(".palkinto").removeClass("hided");
             $("#uusipeli").removeClass("hided");
         }
 
         $(".kysymys1").prop("disabled", true);
+
     });
 
     $(".kysymys2").on("click", function(){
@@ -31,11 +33,12 @@ $(function(){
         if (valinta === 1) {
             $(".toka").addClass("hided");
             $(".kolmas").removeClass("hided");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
         } else {
             $(this).addClass("väärä");
             $("#tulos2").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
             $("#pisteet2").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $(".palkinto").removeClass("hided");
             $("#uusipeli2").removeClass("hided");
         }
 
@@ -49,11 +52,12 @@ $(function(){
         if (valinta === 1) {
             $(".kolmas").addClass("hided");
             $(".neljäs").removeClass("hided");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
         } else {
             $(this).addClass("väärä");
             $("#tulos3").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
             $("#pisteet3").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $(".palkinto").removeClass("hided");
             $("#uusipeli3").removeClass("hided");
         }
 
@@ -67,11 +71,12 @@ $(function(){
         if (valinta === 1) {
             $(".neljäs").addClass("hided");
             $(".viides").removeClass("hided");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
         } else {
             $(this).addClass("väärä");
             $("#tulos4").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
             $("#pisteet4").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $(".palkinto").removeClass("hided");
             $("#uusipeli4").removeClass("hided");
         }
 
@@ -86,11 +91,12 @@ $(function(){
             $(".viides").addClass("hided");
             $(".ohjeet").addClass("hided");
             $(".tulokset").removeClass("hided");
-            oikeat_vastaukset = oikeat_vastaukset + 1;
+            oikeat_vastaukset++;
         } else {
             $(this).addClass("väärä");
             $("#tulos5").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
             $("#pisteet5").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $(".palkinto").removeClass("hided");
             $("#uusipeli5").removeClass("hided");
         }
 
