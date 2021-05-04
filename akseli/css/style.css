@@ -6,3 +6,16 @@
     background-color: red;
 }
 
+
+
+
+
+/* PELI */
+
+#gameScreen {
+    border: 1px solid black;
+}
+
+.gameObject{
+    display: none;
+}
