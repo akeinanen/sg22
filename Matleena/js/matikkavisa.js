@@ -15,7 +15,6 @@ $(function(){
             $("#tulos1").html("Hienoa! Vastauksesi on oikein.");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos1").html("Höh! Vastasit väärin.");
             vastatut++;
@@ -23,6 +22,15 @@ $(function(){
 
         $(".kysymys1").prop("disabled", true);
 
+    });
+
+    $(".vastaus").on("click", function(){
+
+        let vastaus = Number($(this).val());
+
+        if (vastaus === 1) {
+            $(this).parent().addClass("oikein");
+        }
     });
 
     $("#vastaa2").on("click", function(){
@@ -33,7 +41,6 @@ $(function(){
             $("#tulos2").html("Jes! Vastasit oikein.");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos2").html("Voi harmi! Väärin meni.");
             vastatut++;
@@ -51,7 +58,6 @@ $(function(){
             $("#tulos3").html("Hyvä!");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos3").html("Voi harmi. Nyt meni väärin.");
             vastatut++;
@@ -69,7 +75,6 @@ $(function(){
             $("#tulos4").html("Hienoa! Oikein meni.");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos4").html("Höh! Vastaus on väärin.");
             vastatut++;
@@ -87,7 +92,6 @@ $(function(){
             $("#tulos5").html("Jes! Vastaus on oikein.");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos5").html("Höh! Nyt meni mönkään.");
             vastatut++;
@@ -105,7 +109,6 @@ $(function(){
             $("#tulos6").html("Hyvä! Vastaus on oikein.");
             oikeat_vastaukset++;
             vastatut++;
-            $("#total").html(oikeat_vastaukset + " kysymykseen!");
         } else {
             $("#tulos6").html("Höh! Nyt meni mönkään.");
             vastatut++;
@@ -118,14 +121,37 @@ $(function(){
     // Palkintojen lunastus
     $("#lunasta").on("click", function(){
 
-        if (oikeat_vastaukset < 2) {
-            $("#sad").removeClass("hided");
-            $("#lunasta").addClass("hided");
-        } else if (oikeat_vastaukset < 4) {
-            $("#ok").removeClass("hided");
-        } else if (oikeat_vastaukset < 6) {
-            $("#smiley").removeClass("hided");
+        if (vastatut < 6) {
+            myModal();
+        } else if (vastatut === 6) {
+            if (oikeat_vastaukset > 5) {
+                $("#lunasta").addClass("hided");
+                $("#smiley").removeClass("hided");
+                $(".total").html("Pisteesi: " + oikeat_vastaukset + "/6");
+                $("#uusipeli").removeClass("hided");
+            } else if (oikeat_vastaukset >= 3) {
+                $("#lunasta").addClass("hided");
+                $("#ok").removeClass("hided");
+                $(".total").html("Pisteesi: " + oikeat_vastaukset + "/6");
+                $("#uusipeli").removeClass("hided");
+            } else {
+                $("#lunasta").addClass("hided");
+                $("#sad").removeClass("hided");
+                $(".total").html("Pisteesi: " + oikeat_vastaukset + "/6");
+                $("#uusipeli").removeClass("hided");
+            }
         }
+
     });
+
+    $("#uusipeli").on("click", function(){
+
+        window.location.reload();
+    });
+
+    function myModal() {
+        let myModal = new bootstrap.Modal(document.getElementById('myModal'))
+        myModal.show();
+    }
 
 });

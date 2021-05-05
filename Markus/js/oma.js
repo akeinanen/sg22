@@ -28,7 +28,23 @@ $(function () {
             oikein += 1;
         }
 
+        $(".väärä").addClass("väärin");
+        $(".oikea").addClass("oikein");
+        $("[name=vastaus1]").prop("disabled", true);
+        $("[name=vastaus2]").prop("disabled", true);
+        $("[name=vastaus3]").prop("disabled", true);
+        $("[name=vastaus4]").prop("disabled", true);
+        $("[name=vastaus5]").prop("disabled", true);
         $("#tulos").html("Vastasit oikein " + oikein + " " + "/ 5 kysymyksestä");
+
+        if (oikein < 1) {
+            $("#palkinto").html("<img src=/Markus/images/sad.png>");
+        } else if (oikein < 5) {
+            $("#palkinto").html("<img src=/Markus/images/ok.png>");
+        } else {
+            $("#palkinto").html("<img src=/imgs/smiley.png>");
+        }
+        
     })
 
     $("#alusta").on("click", function () {
@@ -39,6 +55,17 @@ $(function () {
         $('input[name=vastaus3]').prop('checked', false);
         $('input[name=vastaus4]').prop('checked', false);
         $('input[name=vastaus5]').prop('checked', false);
+
+        $("[name=vastaus1]").prop("disabled", false);
+        $("[name=vastaus2]").prop("disabled", false);
+        $("[name=vastaus3]").prop("disabled", false);
+        $("[name=vastaus4]").prop("disabled", false);
+        $("[name=vastaus5]").prop("disabled", false);
+
+        $(".oikea").removeClass("oikein");
+        $(".väärä").removeClass("väärin");
+
+        $("#palkinto").html("");
     });
 
 
@@ -55,6 +82,8 @@ $(function () {
 
     $("#eka_nro").html(number1);
     $("#toka_nro").html(number2);
+
+    $("#vastaus2").trigger("focus");
 
     $("#vastaa2").on("click", function () {
         let vastaus = Number($("#vastaus2").val());

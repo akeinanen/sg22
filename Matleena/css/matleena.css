@@ -25,10 +25,8 @@ h3 {
 h4 {
     font-family: Finger Paint;
     color: #5271FF;
-}
-
-.tsemppiä {
-    max-width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .kysymykset {
@@ -48,12 +46,25 @@ h4 {
     font-family: Finger Paint, cursive;
 }
 
+.oikein {
+    color: green;
+    font-weight: bold;
+}
+
+.väärin {
+    color: red;
+}
+
 #prize {
     max-width: 30%;
 }
 
 .hided {
     display: none;
+}
+
+.lunasta {
+    margin-top: 30px;
 }
 
 

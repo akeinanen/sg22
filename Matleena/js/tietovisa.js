@@ -17,7 +17,7 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos1").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
-            $("#pisteet1").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#pisteet1").html("Pisteet: " + oikeat_vastaukset + "/5");
             $(".palkinto").removeClass("hided");
             $("#uusipeli").removeClass("hided");
         }
@@ -37,7 +37,7 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos2").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
-            $("#pisteet2").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#pisteet2").html("Pisteet: " + oikeat_vastaukset + "/5");
             $(".palkinto").removeClass("hided");
             $("#uusipeli2").removeClass("hided");
         }
@@ -56,7 +56,7 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos3").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
-            $("#pisteet3").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#pisteet3").html("Pisteet: " + oikeat_vastaukset + "/5");
             $(".palkinto").removeClass("hided");
             $("#uusipeli3").removeClass("hided");
         }
@@ -75,7 +75,7 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos4").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
-            $("#pisteet4").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#pisteet4").html("Pisteet: " + oikeat_vastaukset + "/5");
             $(".palkinto").removeClass("hided");
             $("#uusipeli4").removeClass("hided");
         }
@@ -95,7 +95,7 @@ $(function(){
         } else {
             $(this).addClass("väärä");
             $("#tulos5").html("Valitettavasti vastauksesi oli väärin ja pelisi päättyy tähän.")
-            $("#pisteet5").html("Pisteesti: " + oikeat_vastaukset + "/5");
+            $("#pisteet5").html("Pisteet: " + oikeat_vastaukset + "/5");
             $(".palkinto").removeClass("hided");
             $("#uusipeli5").removeClass("hided");
         }
