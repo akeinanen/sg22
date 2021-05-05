@@ -46,7 +46,8 @@ const GAMESTATE = {
     RUNNING: 0,
     MENU: 1,
     OVER: 2,
-    NEWLEVEL: 3
+    WIN : 3,
+    NEWLEVEL: 4
 }
 
 function detectCollision(ball, gameObject) {
@@ -171,13 +172,13 @@ class Ball {
 
         this.game = game;
 
-        this.position = { x: 10, y: 400 };
+        this.position;
         this.speed = { x: 3 * (game.currentLevel + 1), y: -3 * (game.currentLevel + 1) };
         this.size = 30;
     }
-
+ 
     reset() {
-        this.position = { x: 10, y: 400 };
+        this.position = { x: Math.floor(Math.random() * (game.gameWidth - 1) + 0), y: 400 };
         this.speed = { x: 3 * (game.currentLevel + 1), y: -3 * (game.currentLevel + 1) };
     }
 
@@ -261,7 +262,7 @@ class Game {
 
     start() {
 
-        if (this.gamestate !== GAMESTATE.MENU && this.gamestate !== GAMESTATE.NEWLEVEL && this.gamestate !== GAMESTATE.OVER) return;
+        if (this.gamestate !== GAMESTATE.MENU && this.gamestate !== GAMESTATE.NEWLEVEL && this.gamestate !== GAMESTATE.OVER && this.gamestate !== GAMESTATE.WIN) return;
 
         this.tiles = buildLevel(this, this.levels[this.currentLevel]);
 
@@ -274,12 +275,17 @@ class Game {
 
     update(dt) {
 
-        if (this.gamestate === GAMESTATE.MENU || this.gamestate === GAMESTATE.GAMEOVER) return;
+        if (this.gamestate === GAMESTATE.MENU || this.gamestate === GAMESTATE.GAMEOVER || this.gamestate === GAMESTATE.WIN) return;
 
         if(this.tiles.length === 0) {
-            this.currentLevel++;
-            this.gamestate = GAMESTATE.NEWLEVEL;
-            this.start();
+            if(this.currentLevel > this.levels.length) {
+                this.gamestate = GAMESTATE.WIN;
+                return;
+            } else {
+                this.currentLevel++;
+                this.gamestate = GAMESTATE.NEWLEVEL;
+                this.start();
+            }
         }
 
         [...this.gameObjects, ...this.tiles].forEach((object) => object.update(dt));
@@ -288,8 +294,6 @@ class Game {
     }
 
     draw(ctx) {
-        
-        [...this.gameObjects, ...this.tiles].forEach((object) => object.draw(ctx));
 
         if (this.gamestate === GAMESTATE.MENU) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
@@ -306,6 +310,7 @@ class Game {
 
 
         if (this.gamestate === GAMESTATE.OVER) {
+            this.currentLevel = 0;
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
             ctx.fillStyle = "rgba(0,0,0,0.7)";
             ctx.fill();
@@ -317,13 +322,21 @@ class Game {
             ctx.font = "20px Arial";
             ctx.fillText("Paina välilyöntiä aloittaaksesi uudelleen", this.gameWidth / 2, this.gameHeight / 2 + 35);
         }
-    }
 
-    togglePause() {
-        if (this.gamestate == GAMESTATE.PAUSED) {
-            this.gamestate = GAMESTATE.RUNNING;
-        } else {
-            this.gamestate = GAMESTATE.PAUSED;
+        if (this.gamestate === GAMESTATE.WON) {
+            this.currentLevel = 0;
+            ctx.rect(0, 0, this.gameWidth, this.gameHeight);
+            ctx.fillStyle = "rgba(0,0,0,0.7)"; 
+            ctx.fill();
+
+            ctx.fillStyle = "green";
+            ctx.font = "30px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText("Onnittelut, voitit pelin!", this.gameWidth / 2, this.gameHeight / 2);
+            ctx.font = "20px Arial";
+            ctx.fillText("Paina välilyöntiä aloittaaksesi uudelleen", this.gameWidth / 2, this.gameHeight / 2 + 35);
+
+            [...this.gameObjects, ...this.tiles].forEach((object) => object.draw(ctx));
         }
     }
 }

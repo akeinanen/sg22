@@ -10,7 +10,6 @@ $(function() {
 
         $("#notification").html("");
 
-        $("#questionCount").html(`Kysymys ${questionCount}`);
         $("#triesLeft").html(`Yritykset: ${triesLeft}`);
     };
 

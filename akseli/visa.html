@@ -31,10 +31,9 @@
         </div>
 
         <div style="display: none;" id="game-container">
-            <p id="questionCount" class="text-end pt-1"></p>
-            <p id="triesLeft" class="text-end"></p>
+            <p id="triesLeft" class="text-end me-5"></p>
             <div id="question-1">
-                <h3 class="text-center">Lorem ipsum</h3>
+                <h3 class="text-center">Kysymys 1</h3>
                 <p class="text-center">Mikä seuraavista JavaSciprt-koodeista palauttaa arvon true kun <code>let x = "10";</code> ?</p>
 
                 <div class="d-flex" style="justify-content: center;">
@@ -142,7 +141,7 @@
                 <h3 class="text-center">Kysymys 5</h3>
                 <p class="text-center">Mitä tarkoittaa NaN?</p>
                 <div class="d-flex" style="justify-content: center;">
-                    <input id="lastAnswer" name="question5" type="text">
+                    <input id="lastAnswer" name="question5" type="text" autocomplete="off">
                 </div>
                 <div class="text-center">
                     <button id="answer-5" class="answer-button button btn-primary mt-5 p-3" data-hide="question-5" data-show="gameCompleted">Vastaa</button>
@@ -150,8 +149,8 @@
             </div>
 
             <div id="gameCompleted" style="display: none;">
-                <h3 class="text-center">Voitit pelin! :)</h3>
-                <p class="text-center">Olet pesunkestävä JavaScript-koodari. Jos nautit visasta, käy katsomassa myös toinen <a>Akselin</a> sovellus tästä</p>
+                <h3 class="text-center mb-3">Voitit pelin! :)</h3>
+                <p class="text-center">Olet pesunkestävä JavaScript-koodari. Jos aivosi tarvitsevat hetken lepoa, rentoudu hetki pelaamalla <a href="/akseli/peli.html">välipeliä</a>.</p>
             </div>
 
             <div id="notification" class="d-flex" style="justify-content: center;">
