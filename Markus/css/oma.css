@@ -1,7 +1,7 @@
 h1 {
     font-family: 'Finger Paint', cursive;
     color: #6666ff;
-    padding: 1em;
+    padding: 0.5em;
 }
 
 .visa1 {
@@ -40,7 +40,7 @@ h1 {
     border-color: rgb(0, 0, 0);
     border-style: groove;
     padding: 2em;
-    background-color: #ff884d;
+    background-color: #798cc9f8;
     color: whitesmoke;
     font-size: large;
     font-weight: bold; 
@@ -83,12 +83,11 @@ h1 {
 }
 
 .väärin {
-    background-color: rgba(255, 0, 0, 0.61);
+    background-color: rgba(255, 0, 0, 0.507);
     width: 100px;
 }
 
 .oikein {
-    background-color: rgba(0, 128, 0, 0.63);
+    background-color: rgba(0, 128, 0, 0.514);
     width: 100px;
 }
-

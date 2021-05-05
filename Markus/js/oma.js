@@ -86,8 +86,12 @@ $(function () {
     $("#vastaus2").trigger("focus");
 
     $("#vastaa2").on("click", function () {
+        
         let vastaus = Number($("#vastaus2").val());
-        if (vastaus === tulo) {
+
+        if (vastaus === 0) {
+            alert("Syötä vastaus");
+        } else if (vastaus === tulo) {
             alert("Oikein!");
             window.location.reload();
         } else {
