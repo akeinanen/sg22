@@ -24,15 +24,6 @@ $(function(){
 
     });
 
-    $(".vastaus").on("click", function(){
-
-        let vastaus = Number($(this).val());
-
-        if (vastaus === 1) {
-            $(this).parent().addClass("oikein");
-        }
-    });
-
     $("#vastaa2").on("click", function(){
 
         let valinta = $("[name=vastaus2]:checked").val();

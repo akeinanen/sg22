@@ -49,10 +49,12 @@ h4 {
 .oikein {
     color: green;
     font-weight: bold;
+    
 }
 
 .väärin {
     color: red;
+    font-weight: bold;
 }
 
 #prize {
