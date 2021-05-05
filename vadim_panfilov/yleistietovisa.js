@@ -110,34 +110,5 @@ $(function () {
         $("#result5").html(" ");  
     });
     
-/*     let flagFirst = true, flagSecond = true, flagThird = true;
- 
-    $("#btn-outline-warning").on("click", function() {
-        if ("#first") {
-            if (flagFirst) {
-                if (Number($('input[name=first]:checked').val()) === 1) {
-                    flagFirst = false;
-                }
-            }
-        } else if ("#second") {
-            if (flagSecond) {
-                if (Number($('input[name=second]:checked').val()) === 1) {
-                    flagSecond = false;
-                }
-            }
-        } else if ("#third") {
-            if (flagThird) {
-                if (Number($('input[name=third]:checked').val()) === 1) {
-                    flagThird = false;
-                }
-            }
-        }
-    });
-     
-    $("#result10").on("click", function() {
-        flagFirst = true;
-        flagSecond = true;
-        flagThird = true;
-    });
- */
+
 });

@@ -7,21 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Visa koululaisille">
     <meta name="author" content="Vadim Panfilov">
-    <title>Visasivu_2 :: Vadim</title>
+    <title>Futisvisa :: Vadim</title>
     <link rel="icon" href="/imgs/smiley.png" type="image/png">
     <!-- CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
     <link rel="stylesheet" href="/css/yhteiset_tyylit.css">
     <link rel="stylesheet" href="style.css">
-    <script> // Load header and footer
-        $(() => {
-            $("#header").load("/header.html");
-            $("footer").load("/footer.html");
-        })
-    </script>
-
 </head>
 
 <body>
@@ -30,7 +25,16 @@
     <main class="container-fluid" id="background">
 
         <div class="row">
-            <h1 class="col-12 text-center display-1">Futisvisa</h1> 
+            <h1 class="col-12 text-center text-warning display-1 mt-5 mb-5">Futisvisa</h1> 
+        </div>
+
+        <div class="row mb-5 pt-5 text-center p-2 border bg-success">
+            <h5 class="col-12">
+                <p class="text-warning">Vastaa kysymykseen. Sen jälkeen voit tarkistaa, montako pistettä keräät.</p>
+                <p class="text-warning">Jos saat yli kuin 3 pistettä, niin sitten pikku palkinto saat.</p>
+                <p class="text-warning">Jos haluat uudestaan kokeilla, sitä varten löytyy painike kysymysten jälkeen.</p> 
+                <p class="text-warning">Tsemppiä!</p>
+            </h5>
         </div>
 
         <div class="row align-items-start">
@@ -41,9 +45,9 @@
                 <div class="card-body">
                     <h6 class="card-title text-warning">1. Mikä on jalkapalloilija Neymarin kotimaa?</h6>
                     <ul class="card-text">
-                        <li class="text-warning"><input name="first" class="answer1 option-input" type="radio" value="0">a. Suomi</li>
-                        <li class="text-warning"><input name="first" class="answer1 option-input" type="radio" value="1">b. Brazil</li>
-                        <li class="text-warning"><input name="first" class="answer1 option-input" type="radio" value="0">c. Puola</li>
+                        <li class="text-warning for_li_elements"><input name="first" class="answer1 option-input" type="radio" value="0">a. Suomi</li>
+                        <li class="text-warning for_li_elements"><input name="first" class="answer1 option-input" type="radio" value="1">b. Brazil</li>
+                        <li class="text-warning for_li_elements"><input name="first" class="answer1 option-input" type="radio" value="0">c. Puola</li>
                     </ul>
                     <p><button type="button" class="btn btn-outline-warning bg-success first">Vastaa</button></p>
                     <p id="result1" class="text-warning"></p>
@@ -56,9 +60,9 @@
                 <div class="card-body">
                     <h6 class="card-title text-warning">2. Minkä maalainen on ex-jalkapalloilija Zinédine Zidane?</h6>
                     <ul class="card-text">
-                        <li class="text-warning"><input name="second" class="answer1 option-input" type="radio" value="0">a. Suomi</li>
-                        <li class="text-warning"><input name="second" class="answer1 option-input" type="radio" value="1">b. Italia</li>
-                        <li class="text-warning"><input name="second" class="answer1 option-input" type="radio" value="0">c. Puola</li>
+                        <li class="text-warning for_li_elements"><input name="second" class="answer1 option-input" type="radio" value="0">a. Suomi</li>
+                        <li class="text-warning for_li_elements"><input name="second" class="answer1 option-input" type="radio" value="1">b. Italia</li>
+                        <li class="text-warning for_li_elements"><input name="second" class="answer1 option-input" type="radio" value="0">c. Puola</li>
                     </ul>
                     <p><button type="button" class="btn btn-outline-warning bg-success second">Vastaa</button></p>
                     <p id="result2" class="text-warning"></p>
@@ -71,9 +75,9 @@
                 <div class="card-body">
                     <h6 class="card-title text-warning">3. Mikä on jalkapallon syntymäpaikka?</h6>
                     <ul class="card-text">
-                        <li class="text-warning"><input name="third" class="answer1 option-input" type="radio" value="0">a. Ranska</li>
-                        <li class="text-warning"><input name="third" class="answer1 option-input" type="radio" value="1">b. Iso-Britannia</li>
-                        <li class="text-warning"><input name="third" class="answer1 option-input" type="radio" value="0">c. Puola</li>
+                        <li class="text-warning for_li_elements"><input name="third" class="answer1 option-input" type="radio" value="0">a. Ranska</li>
+                        <li class="text-warning for_li_elements"><input name="third" class="answer1 option-input" type="radio" value="1">b. Iso-Britannia</li>
+                        <li class="text-warning for_li_elements"><input name="third" class="answer1 option-input" type="radio" value="0">c. Puola</li>
                     </ul>
                     <p><button type="button" class="btn btn-outline-warning bg-success third">Vastaa</button></p>
                     <p id="result3" class="text-warning"></p>
@@ -86,9 +90,9 @@
                 <div class="card-body">
                     <h6 class="card-title text-warning">4. Kuka on Pelén mielestä maailman paras jalkapalloilija?</h6>
                     <ul class="card-text">
-                        <li class="text-warning"><input name="fourth" class="answer1 option-input" type="radio" value="0">a. Lionel Messi</li>
-                        <li class="text-warning"><input name="fourth" class="answer1 option-input" type="radio" value="1">b. Diego Maradona</li>
-                        <li class="text-warning"><input name="fourth" class="answer1 option-input" type="radio" value="0">c. Cristiano Ronaldo</li>
+                        <li class="text-warning for_li_elements"><input name="fourth" class="answer1 option-input" type="radio" value="0">a. Lionel Messi</li>
+                        <li class="text-warning for_li_elements"><input name="fourth" class="answer1 option-input" type="radio" value="1">b. Diego Maradona</li>
+                        <li class="text-warning for_li_elements"><input name="fourth" class="answer1 option-input" type="radio" value="0">c. Cristiano Ronaldo</li>
                     </ul>
                     <p><button type="button" class="btn btn-outline-warning bg-success fourth">Vastaa</button></p>
                     <p id="result4" class="text-warning"></p>
@@ -99,37 +103,67 @@
                 <img src="img/world_championship.png" class="card-img-top rounded-pill"
                     alt="Pelén">
                 <div class="card-body">
-                    <h6 class="card-title text-warning">5. Missä pelattiin Jalkapallon maailmanmestaruuskilpailut 2018?</h6>
+                    <h6 class="card-title text-warning text-break">5. Missä pelattiin Jalkapallon 
+                        maailmanmestaruuskilpailut 2018?</h6>
                     <ul class="card-text">
-                        <li class="text-warning"><input name="fifth" class="answer1 option-input" type="radio" value="0">a. Englanti</li>
-                        <li class="text-warning"><input name="fifth" class="answer1 option-input" type="radio" value="1">b. Venäjä</li>
-                        <li class="text-warning"><input name="fifth" class="answer1 option-input" type="radio" value="0">c. Saudi-Arabia</li>
+                        <li class="text-warning for_li_elements"><input name="fifth" class="answer1 option-input" type="radio" value="0">a. Englanti</li>
+                        <li class="text-warning for_li_elements"><input name="fifth" class="answer1 option-input" type="radio" value="1">b. Venäjä</li>
+                        <li class="text-warning for_li_elements"><input name="fifth" class="answer1 option-input" type="radio" value="0">c. Saudi-Arabia</li>
                     </ul>
                     <p><button type="button" class="btn btn-outline-warning bg-success fifth">Vastaa</button></p>
                     <p id="result5" class="text-warning"></p>
                 </div>
             </div>
-
-            <div class="col-12 mb-3">
-                <button id="result10" class="btn bg-success btn-sm"><span class="text-warning">Näytä oikeiden vastausten määrä</span><p id="pisteet" class="text-warning"></p></button>
+            
+            <div class="col-4 mb-3 mx-5"> <!-- button oikeiden vastausten määrä -->
+                <button id="result10" class="btn bg-success btn-sm for_li_elements"><span class="text-warning">Näytä oikeiden vastausten määrä</span><p id="pisteet" 
+                    class="text-warning"></p></button>
             </div>
 
-            <div class="col-12 mb-3">
-                <img src="../imgs/smiley.png" alt="smiley" id="smiley" class="smiley1">
+            <div class="col-4"> <!-- img if yli 3 oikea vastausta käyttäjä saa -->
+                <img src="../imgs/smiley.png" alt="smiley" id="smiley" class="smiley1 bg-light">
             </div>
 
-            <div class="col-12 mb-3">
-                <button id="uudestaan" class="btn bg-success btn-sm"><span class="text-warning">Haluatko aloittaa uudestaan?</span><p class="text-warning"></p></button>
+            <div class="col-12 mb-5"> <!-- button uudestaan aloittaa -->
+                <button id="uudestaan" class="btn bg-success btn-sm"><span class="text-warning for_li_elements">Aloittaa uudestaan</span>
+                    <p class="text-warning"></p></button>
             </div>
 
         </div>
 
     </main>
 
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="m_title">Ooops!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="m_body">
+                    <p>Vastaathan ensin kaikkiin kysymyksiin, jotta voit lunastaa palkintosi.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
     <footer id="footer"></footer>
+
+    <script> // Load header and footer
+        $(() => {
+            $("#header").load("/header.html");
+            $("footer").load("/footer.html");
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
     <script src="/js/skole.js"></script>
     <script src="footis_visa.js"></script>
 
+    
 </body>
 
 </html>
