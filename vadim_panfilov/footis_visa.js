@@ -1,9 +1,13 @@
 /// <reference path="jquery-3.6.0.min.js" />
 
+/* Author - Vadim Panfilov */
 $(function () {
+
     let flagFirst = true, flagSecond = true, flagThird = true, flagFourth = true, flagFifth = true;
+
     let counter = 0;
     let answers = 0;
+
     $(".btn").on("click", function () {
 
         if ($(this).hasClass("first")) {
@@ -20,9 +24,9 @@ $(function () {
                     $("#result1").addClass("selected");
 
                     counter++;
-                    
+
                 } else {
-                   
+
                     $('#result1').html("Ei, oikea vastaus on Brazil");
                     $("#result1").removeClass("selected");
                     $('input[name=first][value="1"]').addClass("oikea_vastaus");
@@ -41,9 +45,9 @@ $(function () {
                     $("#result2").html("Oikea vastaus!");
                     $("#result2").addClass("selected");
                     counter++;
-                   
+
                 } else {
-                    
+
                     $('#result2').html("Ei, oikea vastaus on Italia");
                     $("#result2").removeClass("selected");
                     $('input[name=second][value="1"]').addClass("oikea_vastaus");
@@ -61,9 +65,9 @@ $(function () {
                     $("#result3").html("Oikea vastaus!");
                     $("#result3").addClass("selected");
                     counter++;
-               
+
                 } else {
-             
+
                     $('#result3').html("Ei, oikea vastaus on Iso-Britannia");
                     $("#result3").removeClass("selected");
                     $('input[name=third][value="1"]').addClass("oikea_vastaus");
@@ -81,9 +85,9 @@ $(function () {
                     $("#result4").html("Hyvä!");
                     $("#result4").addClass("selected");
                     counter++;
-              
+
                 } else {
-     
+
                     $('#result4').html("Ei, oikea vastaus on Diego Maradona");
                     $("#result4").removeClass("selected");
                     $('input[name=fourth][value="1"]').addClass("oikea_vastaus");
@@ -96,15 +100,15 @@ $(function () {
             let vastaus = Number($('input[name=fifth]:checked').val());
             if (flagFifth) {
                 $('input[name=fifth]').prop("disabled", true);
-                flagFifth = true; 
+                flagFifth = true;
                 answers++;
                 if (vastaus === 1) {
                     $("#result5").html("Oikea vastaus!");
                     $("#result5").addClass("selected");
                     counter++;
-                    
+
                 } else {
-                    
+
                     $('#result5').html("Ei, oikea vastaus on Venäjä");
                     $("#result5").removeClass("selected");
                     $('input[name=fifth][value="1"]').addClass("oikea_vastaus");
@@ -115,12 +119,13 @@ $(function () {
     });
 
     $("#result10").on("click", function () { // laskea oikeat vastaukset button
-        
-        console.log(answers);
-       if(answers < 5) {
+
+        if (answers < 5) {
 
             myModal();
-        
+
+        } else if (counter < 3) {
+            $("#pisteet").html("Pisteet: " + counter + "/5" + "<br>" + "Kokeile uudelleen. Paina 'Aloittaa uudelleen' nappi.");
         } else if (counter >= 3) {
             $("#pisteet").html("Pisteet: " + counter + "/5");
             $("#smiley").removeClass("smiley1");
@@ -164,7 +169,6 @@ $(function () {
 
         $("#pisteet").html("Pisteet: ");
 
-
         $("#smiley").addClass("smiley1")
 
         $('input[name=first][value="1"]').removeClass("oikea_vastaus");
@@ -177,22 +181,5 @@ $(function () {
 
     // attr for 1 element
     // prop for many elements
-
-    // tyhjennetaan edelliset resultit
-    $("[name=first]").on("click", function () {
-        $("#result1").html(" ");
-    });
-    $("[name=second]").on("click", function () {
-        $("#result2").html(" ");
-    });
-    $("[name=third]").on("click", function () {
-        $("#result3").html(" ");
-    });
-    $("[name=fourth]").on("click", function () {
-        $("#result4").html(" ");
-    });
-    $("[name=first]").on("click", function () {
-        $("#result5").html(" ");
-    });
 
 });
