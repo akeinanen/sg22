@@ -29,9 +29,10 @@ $(function () {
 
                 } else {
 
-                    $('#result1').html("Hups! Väärä vastaus – kokeile uudelleen.");
+                    $('#result1').html("Hups! Väärä vastaus.");
                     $("#result1").removeClass("right_answer");
                     $("#result1").addClass("false_answer");
+                    $('input[name=first][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
 
                 }
             }
@@ -53,9 +54,11 @@ $(function () {
                     counter++
                 } else {
 
-                    $('#result2').html("Kokeile uudelleen");
+                    $('#result2').html("Hups! Väärä vastaus.");
                     $("#result2").removeClass("right_answer");
                     $("#result2").addClass("false_answer");
+                    $('input[name=second][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
+
                 }
             }
 
@@ -75,9 +78,11 @@ $(function () {
                     counter++
                 } else {
 
-                    $('#result3').html("Hups! Väärä vastaus – kokeile uudelleen.");
+                    $('#result3').html("Hups! Väärä vastaus.");
                     $("#result3").removeClass("right_answer");
                     $("#result3").addClass("false_answer");
+                    $('input[name=third][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
+
                 }
             }
 
@@ -98,9 +103,11 @@ $(function () {
 
                 } else {
 
-                    $('#result4').html("Kokeile uudelleen");
+                    $('#result4').html("Väärä vastaus.");
                     $("#result4").removeClass("right_answer");
                     $("#result4").addClass("false_answer");
+                    $('input[name=fourth][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
+
                 }
             }
 
@@ -124,13 +131,14 @@ $(function () {
                     $('#result5').html("Hups! Väärä vastaus – kokeile uudelleen.");
                     $("#result5").removeClass("right_answer");
                     $("#result5").addClass("false_answer");
+                    $('input[name=fifth][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
+
                 }
             }
         }
     });
 
     // Näyttää pisteitä button
-
     $("#result_pisteet").on("click", function () { 
         if (answers < 5 && answers ) {
             myModal();
@@ -148,9 +156,8 @@ $(function () {
 
     // Aloittaa uudelleen button
     $("#uudelleen_button").on("click", function(){
-         // window.location.reload(); 
-        // Kumpi on helpompi?!
-        question1 = true;
+         window.location.reload(); 
+/*      question1 = true;
         question2 = true;
         question3 = true;
         question4 = true;
@@ -180,6 +187,14 @@ $(function () {
 
         $("#pisteet").html(" ");
         $("#man1").hide();
+
+        $('input[name=first][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+        $('input[name=second][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+        $('input[name=third][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+        $('input[name=fourth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+        $('input[name=fifth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+        */    
+   
     });
     
 

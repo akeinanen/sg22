@@ -84,6 +84,13 @@ h1 {
   background-color: red;
 }
 
+.oikea_vastaus_for_yleistietovisa {
+  background-color: yellow;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding-bottom: 15px;
+}
+
 #background { /** Jalkapallovisan background **/
   background-image: url('img/background_sward_football.jpg');
   background-size: cover;
