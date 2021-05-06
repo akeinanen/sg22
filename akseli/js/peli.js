@@ -1,4 +1,3 @@
-
 /* PUBLIC FUNCTIONS */
 
 let level1 = [
@@ -295,6 +294,8 @@ class Game {
 
     draw(ctx) {
 
+        [...this.gameObjects, ...this.tiles].forEach((object) => object.draw(ctx));
+
         if (this.gamestate === GAMESTATE.MENU) {
             ctx.rect(0, 0, this.gameWidth, this.gameHeight);
             ctx.fillStyle = "rgba(0,0,0,0.7)";
@@ -336,7 +337,7 @@ class Game {
             ctx.font = "20px Arial";
             ctx.fillText("Paina välilyöntiä aloittaaksesi uudelleen", this.gameWidth / 2, this.gameHeight / 2 + 35);
 
-            [...this.gameObjects, ...this.tiles].forEach((object) => object.draw(ctx));
+      
         }
     }
 }
