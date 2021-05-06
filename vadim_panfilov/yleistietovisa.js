@@ -128,7 +128,7 @@ $(function () {
 
                 } else {
 
-                    $('#result5').html("Hups! Väärä vastaus – kokeile uudelleen.");
+                    $('#result5').html("Hups! Väärä vastaus.");
                     $("#result5").removeClass("right_answer");
                     $("#result5").addClass("false_answer");
                     $('input[name=fifth][value="1"]').parent().addClass("oikea_vastaus_for_yleistietovisa");
@@ -139,13 +139,15 @@ $(function () {
     });
 
     // Näyttää pisteitä button
-    $("#result_pisteet").on("click", function () { 
-        if (answers < 5 && answers ) {
+    $("#result_pisteet").on("click", function () {
+        if (answers < 5 && answers) {
             myModal();
         } else if (counter === 5) {
-        } if(counter >= 3) {
+        } else if (counter < 3) {
+            $("#pisteet").html("Pisteet: " + counter + "/5" + "<br>" + "Kokeile uudelleen. Paina 'Aloittaa uudelleen' nappi.");
+        } if (counter >= 3) {
             $("#pisteet").html("Pisteet: " + counter + "/5");
-            $("#man1").show(); // palkinto if 3 osp
+            $("#man1").show(); // palkinto if yli 3 osp
         }
     });
 
@@ -155,48 +157,48 @@ $(function () {
     }
 
     // Aloittaa uudelleen button
-    $("#uudelleen_button").on("click", function(){
-         window.location.reload(); 
-/*      question1 = true;
-        question2 = true;
-        question3 = true;
-        question4 = true;
-        question5 = true;
+    $("#uudelleen_button").on("click", function () {
+        window.location.reload();
+        /*      question1 = true;
+                question2 = true;
+                question3 = true;
+                question4 = true;
+                question5 = true;
+        
+                $('input[name=first]').prop("disabled", false);
+                $('input[name=second]').prop("disabled", false);
+                $('input[name=third]').prop("disabled", false);
+                $('input[name=fourth]').prop("disabled", false);
+                $('input[name=fifth]').prop("disabled", false);
+        
+                counter = 0;
+                answers = 0;
+        
+                // tyhjennetaan edelliset resultit
+                $("#result1").html(" ");
+                $("#result2").html(" ");
+                $("#result3").html(" ");
+                $("#result4").html(" ");
+                $("#result5").html(" ");
+        
+                $('input[name=first]').prop("checked", false);
+                $('input[name=second]').prop("checked", false);
+                $('input[name=third]').prop("checked", false);
+                $('input[name=fourth]').prop("checked", false);
+                $('input[name=fifth]').prop("checked", false);
+        
+                $("#pisteet").html(" ");
+                $("#man1").hide();
+        
+                $('input[name=first][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+                $('input[name=second][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+                $('input[name=third][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+                $('input[name=fourth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+                $('input[name=fifth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
+                */
 
-        $('input[name=first]').prop("disabled", false);
-        $('input[name=second]').prop("disabled", false);
-        $('input[name=third]').prop("disabled", false);
-        $('input[name=fourth]').prop("disabled", false);
-        $('input[name=fifth]').prop("disabled", false);
-
-        counter = 0;
-        answers = 0;
-
-        // tyhjennetaan edelliset resultit
-        $("#result1").html(" ");
-        $("#result2").html(" ");
-        $("#result3").html(" ");
-        $("#result4").html(" ");
-        $("#result5").html(" ");
-
-        $('input[name=first]').prop("checked", false);
-        $('input[name=second]').prop("checked", false);
-        $('input[name=third]').prop("checked", false);
-        $('input[name=fourth]').prop("checked", false);
-        $('input[name=fifth]').prop("checked", false);
-
-        $("#pisteet").html(" ");
-        $("#man1").hide();
-
-        $('input[name=first][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
-        $('input[name=second][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
-        $('input[name=third][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
-        $('input[name=fourth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
-        $('input[name=fifth][value="1"]').parent().removeClass("oikea_vastaus_for_yleistietovisa");
-        */    
-   
     });
-    
+
 
 
 });
