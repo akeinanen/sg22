@@ -1,9 +1,13 @@
 /// <reference path="jquery-3.6.0.min.js" />
 
+/* Author - Vadim Panfilov */
 $(function () {
+    
     let flagFirst = true, flagSecond = true, flagThird = true, flagFourth = true, flagFifth = true;
+
     let counter = 0;
     let answers = 0;
+
     $(".btn").on("click", function () {
 
         if ($(this).hasClass("first")) {
@@ -116,7 +120,6 @@ $(function () {
 
     $("#result10").on("click", function () { // laskea oikeat vastaukset button
         
-        console.log(answers);
        if(answers < 5) {
 
             myModal();
@@ -164,7 +167,6 @@ $(function () {
 
         $("#pisteet").html("Pisteet: ");
 
-
         $("#smiley").addClass("smiley1")
 
         $('input[name=first][value="1"]').removeClass("oikea_vastaus");
@@ -177,22 +179,5 @@ $(function () {
 
     // attr for 1 element
     // prop for many elements
-
-    // tyhjennetaan edelliset resultit
-    $("[name=first]").on("click", function () {
-        $("#result1").html(" ");
-    });
-    $("[name=second]").on("click", function () {
-        $("#result2").html(" ");
-    });
-    $("[name=third]").on("click", function () {
-        $("#result3").html(" ");
-    });
-    $("[name=fourth]").on("click", function () {
-        $("#result4").html(" ");
-    });
-    $("[name=first]").on("click", function () {
-        $("#result5").html(" ");
-    });
 
 });
