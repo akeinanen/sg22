@@ -16,7 +16,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos1").html("Höh! Vastasit väärin.");
+            $("#tulos1").html("Höh! Vastasit väärin. Oikea vastaus olisi ollut 15.");
             vastatut++;
         }
 
@@ -33,7 +33,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos2").html("Voi harmi! Väärin meni.");
+            $("#tulos2").html("Voi harmi! Väärin meni. Oikea vastaus olisi ollut 24.");
             vastatut++;
         }
 
@@ -50,7 +50,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos3").html("Voi harmi. Nyt meni väärin.");
+            $("#tulos3").html("Voi harmi. Nyt meni väärin. Oikea vastaus olisi ollut 42.");
             vastatut++;
         }
 
@@ -67,7 +67,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos4").html("Höh! Vastaus on väärin.");
+            $("#tulos4").html("Höh! Vastaus on väärin. Oikea vastaus olisi ollut 40.");
             vastatut++;
         }
 
@@ -84,7 +84,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos5").html("Höh! Nyt meni mönkään.");
+            $("#tulos5").html("Höh! Nyt meni mönkään. Oikea vastaus olisi ollut 72.");
             vastatut++;
         }
 
@@ -101,7 +101,7 @@ $(function(){
             oikeat_vastaukset++;
             vastatut++;
         } else {
-            $("#tulos6").html("Höh! Nyt meni mönkään.");
+            $("#tulos6").html("Höh! Nyt meni mönkään. Oikea vastaus olisi ollut 21.");
             vastatut++;
         }
 
